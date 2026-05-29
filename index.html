@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ayurveda Knowledge Library</title>
+    <meta
+      name="description"
+      content="Educational Ayurvedic herb and formulation reference tool with rule-based symptom assessment."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="brand" href="#home">Ayurveda Knowledge Library</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">
+          Menu
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#herbs">Herb Library</a>
+          <a href="#formulations">Formulation Library</a>
+          <a href="#workspace">Workspace</a>
+          <a href="#assessment">Symptom Assessment</a>
+          <a href="#safety">Safety Rules</a>
+          <a href="#sources">Sources</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-content">
+          <p class="eyebrow">Static educational reference</p>
+          <h1>Ayurveda Knowledge Library</h1>
+          <p class="subtitle">Educational decision-support tool for Ayurvedic herb and formulation research</p>
+          <div class="disclaimer warning-box" role="note">
+            <strong>Medical disclaimer:</strong>
+            This tool is for educational research only. It does not diagnose, treat, cure, or prevent disease.
+            Consult a qualified physician or Ayurvedic practitioner before using herbs or formulations, especially
+            if pregnant, breastfeeding, elderly, a child, taking medicines, or managing chronic illness.
+          </div>
+        </div>
+      </section>
+
+      <section class="section compact-nav" aria-label="Library sections">
+        <a href="#herbs">Herb Library</a>
+        <a href="#formulations">Formulation Library</a>
+        <a href="#workspace">Workspace</a>
+        <a href="#assessment">Symptom Assessment</a>
+        <a href="#safety">Safety Rules</a>
+        <a href="#sources">Sources</a>
+      </section>
+
+      <section class="section dashboard" aria-label="Dynamic overview">
+        <div class="metric-grid" id="metricGrid">
+          <article class="metric-card">
+            <span>Herbs</span>
+            <strong id="herbMetric">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Formulations</span>
+            <strong id="formulationMetric">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Safety Rules</span>
+            <strong id="safetyMetric">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Saved Items</span>
+            <strong id="savedMetric">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="herbs">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reference cards</p>
+            <h2>Herb Library</h2>
+          </div>
+          <p>Search by Sanskrit, common, botanical, traditional use, dosha, or safety term.</p>
+        </div>
+        <div class="toolbar" aria-label="Herb filters">
+          <label>
+            <span>Search</span>
+            <input id="herbSearch" type="search" placeholder="Search herbs and reference items" />
+          </label>
+          <label>
+            <span>Dosha</span>
+            <select id="herbDoshaFilter">
+              <option value="">All doshas</option>
+              <option value="vata">Vata</option>
+              <option value="pitta">Pitta</option>
+              <option value="kapha">Kapha</option>
+            </select>
+          </label>
+          <label>
+            <span>Risk</span>
+            <select id="herbRiskFilter">
+              <option value="">All risk levels</option>
+              <option value="low">Low</option>
+              <option value="caution">Caution</option>
+              <option value="physician-only">Physician-only</option>
+            </select>
+          </label>
+          <label>
+            <span>Sort</span>
+            <select id="herbSort">
+              <option value="name">Name</option>
+              <option value="risk">Risk level</option>
+              <option value="dosha">Dosha relevance</option>
+            </select>
+          </label>
+        </div>
+        <div class="result-count" id="herbCount" aria-live="polite"></div>
+        <div class="card-grid" id="herbGrid"></div>
+      </section>
+
+      <section class="section section-muted" id="formulations">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Classical and common combinations</p>
+            <h2>Formulation Library</h2>
+          </div>
+          <p>Educational summaries only. Individual suitability depends on constitution, context, medicines, and diagnosis.</p>
+        </div>
+        <div class="toolbar" aria-label="Formulation filters">
+          <label>
+            <span>Search</span>
+            <input id="formulationSearch" type="search" placeholder="Search formulations" />
+          </label>
+          <label>
+            <span>Dosha</span>
+            <select id="formulationDoshaFilter">
+              <option value="">All doshas</option>
+              <option value="vata">Vata</option>
+              <option value="pitta">Pitta</option>
+              <option value="kapha">Kapha</option>
+            </select>
+          </label>
+          <label>
+            <span>Risk</span>
+            <select id="formulationRiskFilter">
+              <option value="">All risk levels</option>
+              <option value="low">Low</option>
+              <option value="caution">Caution</option>
+              <option value="physician-only">Physician-only</option>
+            </select>
+          </label>
+          <label>
+            <span>Sort</span>
+            <select id="formulationSort">
+              <option value="name">Name</option>
+              <option value="risk">Risk level</option>
+              <option value="category">Category</option>
+            </select>
+          </label>
+        </div>
+        <div class="result-count" id="formulationCount" aria-live="polite"></div>
+        <div class="card-grid" id="formulationGrid"></div>
+      </section>
+
+      <section class="section" id="workspace">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Local browser workspace</p>
+            <h2>Research Workspace</h2>
+          </div>
+          <p>Save reference items, compare safety notes, and revisit past educational assessments. Data stays in this browser.</p>
+        </div>
+        <div class="workspace-grid">
+          <article class="workspace-panel">
+            <div class="panel-heading">
+              <h3>Saved Items</h3>
+              <button class="text-button" type="button" data-action="clear-favorites">Clear</button>
+            </div>
+            <div id="favoritesList" class="mini-list"></div>
+          </article>
+          <article class="workspace-panel">
+            <div class="panel-heading">
+              <h3>Compare</h3>
+              <button class="text-button" type="button" data-action="clear-compare">Clear</button>
+            </div>
+            <div id="compareList" class="compare-list"></div>
+          </article>
+          <article class="workspace-panel">
+            <div class="panel-heading">
+              <h3>Assessment History</h3>
+              <button class="text-button" type="button" data-action="clear-history">Clear</button>
+            </div>
+            <div id="historyList" class="mini-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="assessment">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Rule-based only</p>
+            <h2>Symptom Assessment</h2>
+          </div>
+          <p>The form screens for red flags and safety constraints before showing educational supportive options.</p>
+        </div>
+
+        <form class="assessment-form" id="assessmentForm">
+          <fieldset>
+            <legend>Current concern</legend>
+            <label>
+              <span>Main symptom</span>
+              <textarea id="mainSymptom" name="mainSymptom" rows="3" required placeholder="Describe the main symptom and any warning signs"></textarea>
+            </label>
+            <div class="form-grid">
+              <label>
+                <span>Duration</span>
+                <select id="duration" name="duration">
+                  <option value="acute">Less than 7 days</option>
+                  <option value="subacute">1-6 weeks</option>
+                  <option value="chronic">More than 6 weeks</option>
+                </select>
+              </label>
+              <label>
+                <span>Severity</span>
+                <select id="severity" name="severity">
+                  <option value="mild">Mild</option>
+                  <option value="moderate">Moderate</option>
+                  <option value="severe">Severe</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Personal context</legend>
+            <div class="form-grid three">
+              <label>
+                <span>Age</span>
+                <input id="age" name="age" type="number" min="0" max="120" placeholder="Years" />
+              </label>
+              <label>
+                <span>Weight</span>
+                <input id="weight" name="weight" type="number" min="0" placeholder="kg" />
+              </label>
+              <label>
+                <span>Height</span>
+                <input id="height" name="height" type="number" min="0" placeholder="cm" />
+              </label>
+            </div>
+            <div class="form-grid">
+              <label>
+                <span>Pregnancy/lactation</span>
+                <select id="pregnancy" name="pregnancy">
+                  <option value="none">Not pregnant or breastfeeding</option>
+                  <option value="pregnant">Pregnant</option>
+                  <option value="lactating">Breastfeeding</option>
+                  <option value="trying">Trying to conceive</option>
+                </select>
+              </label>
+              <label>
+                <span>Existing diagnosis</span>
+                <textarea id="diagnosis" name="diagnosis" rows="2" placeholder="Known diagnoses, chronic conditions"></textarea>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Medicines and safety</legend>
+            <div class="form-grid">
+              <label>
+                <span>Current medicines</span>
+                <textarea id="medicines" name="medicines" rows="2" placeholder="Medicines, supplements, anticoagulants, thyroid or diabetes medicines"></textarea>
+              </label>
+              <label>
+                <span>Allergies</span>
+                <textarea id="allergies" name="allergies" rows="2" placeholder="Known food, herb, medicine, or plant allergies"></textarea>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Pattern clues</legend>
+            <div class="form-grid three">
+              <label>
+                <span>Digestion/appetite</span>
+                <select id="digestion" name="digestion">
+                  <option value="">Select</option>
+                  <option value="irregular">Irregular appetite, gas, bloating</option>
+                  <option value="sharp">Strong hunger, acidity, burning</option>
+                  <option value="slow">Slow appetite, heaviness</option>
+                  <option value="balanced">Generally balanced</option>
+                </select>
+              </label>
+              <label>
+                <span>Stool pattern</span>
+                <select id="stool" name="stool">
+                  <option value="">Select</option>
+                  <option value="dry">Dry, hard, irregular</option>
+                  <option value="loose">Loose, urgent, burning</option>
+                  <option value="sticky">Sticky, sluggish, incomplete</option>
+                  <option value="regular">Regular</option>
+                </select>
+              </label>
+              <label>
+                <span>Sleep</span>
+                <select id="sleep" name="sleep">
+                  <option value="">Select</option>
+                  <option value="light">Light or interrupted</option>
+                  <option value="hot">Disturbed by heat or irritability</option>
+                  <option value="heavy">Heavy, long, hard to wake</option>
+                  <option value="restful">Restful</option>
+                </select>
+              </label>
+              <label>
+                <span>Stress</span>
+                <select id="stress" name="stress">
+                  <option value="">Select</option>
+                  <option value="anxious">Anxious, restless, overwhelmed</option>
+                  <option value="irritable">Irritable, intense, impatient</option>
+                  <option value="withdrawn">Low motivation, dullness</option>
+                  <option value="steady">Steady</option>
+                </select>
+              </label>
+              <label>
+                <span>Heat/cold tendency</span>
+                <select id="temperature" name="temperature">
+                  <option value="">Select</option>
+                  <option value="cold">Often cold, dry</option>
+                  <option value="hot">Often hot, flushed, burning</option>
+                  <option value="damp">Cool, heavy, damp</option>
+                  <option value="neutral">Neutral</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="primary-button" type="submit">Review educational assessment</button>
+            <button class="secondary-button" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <div class="assessment-result" id="assessmentResult" aria-live="polite"></div>
+      </section>
+
+      <section class="section section-muted" id="safety">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Conservative screening</p>
+            <h2>Safety Rules</h2>
+          </div>
+          <p>These rules suppress or narrow suggestions when qualified clinical review is important.</p>
+        </div>
+        <div class="warning-box">
+          <strong>Red flag rule:</strong> chest pain, severe breathlessness, fainting, blood in stool or urine,
+          severe abdominal pain, high fever, pregnancy complications, sudden weakness, confusion, uncontrolled
+          vomiting, or severe allergic reaction triggers “Seek medical care promptly” and suppresses herb suggestions.
+        </div>
+        <div class="card-grid" id="safetyGrid"></div>
+      </section>
+
+      <section class="section" id="sources">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reference trail</p>
+            <h2>Sources</h2>
+          </div>
+          <p>Classical, pharmacopoeial, formulary, institutional, and safety references used for source labels.</p>
+        </div>
+        <div class="source-list" id="sourceList"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Educational research reference. Built as a static GitHub Pages MVP with no backend, API keys, or paid services.</p>
+    </footer>
+
+    <div class="detail-drawer" id="detailDrawer" hidden>
+      <div class="drawer-backdrop" data-action="close-details"></div>
+      <aside class="drawer-panel" aria-label="Reference detail" role="dialog" aria-modal="true">
+        <button class="drawer-close" type="button" data-action="close-details" aria-label="Close detail panel">Close</button>
+        <div id="detailContent"></div>
+      </aside>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="data/app-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "constipation": { "dosha": "vata", "supportiveOptions": ["Triphala", "Haritaki"] },
+  "bloating": { "dosha": "vata", "supportiveOptions": ["Hingvastak", "Ajwain", "Jeera", "Saunf"] },
+  "gas": { "dosha": "vata", "supportiveOptions": ["Hingvastak", "Ajwain", "Jeera"] },
+  "acidity": { "dosha": "pitta", "supportiveOptions": ["Amalaki", "Shatavari", "Guduchi"] },
+  "burning": { "dosha": "pitta", "supportiveOptions": ["Amalaki", "Shatavari", "Guduchi"] },
+  "stress": { "dosha": "vata", "supportiveOptions": ["Brahmi", "Mandukaparni", "Ashwagandha"] },
+  "poor sleep": { "dosha": "vata", "supportiveOptions": ["Brahmi", "Ashwagandha"] },
+  "cough": { "dosha": "kapha", "supportiveOptions": ["Sitopaladi", "Talisadi", "Yashtimadhu"] },
+  "congestion": { "dosha": "kapha", "supportiveOptions": ["Trikatu", "Talisadi", "Sitopaladi"] },
+  "heaviness": { "dosha": "kapha", "supportiveOptions": ["Trikatu", "Punarnava", "Hingvastak"] },
+  "fatigue": { "dosha": "mixed", "supportiveOptions": ["Guduchi", "Amalaki", "Chyawanprash"] },
+  "water retention": { "dosha": "kapha", "supportiveOptions": ["Punarnava", "Gokshura"] }
+}

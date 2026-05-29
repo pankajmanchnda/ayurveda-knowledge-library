@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Triphala",
+    "category": "Digestive rasayana powder",
+    "ingredients": ["Haritaki", "Bibhitaki", "Amalaki"],
+    "traditionalIndication": "Traditionally used for bowel regularity, digestive support, and rasayana contexts.",
+    "doshaRelevance": ["vata", "pitta", "kapha"],
+    "anupana": "Warm water is commonly referenced; individualized guidance is preferred.",
+    "cautions": ["May loosen stool", "Caution with dehydration, diarrhea, pregnancy, and medicines"],
+    "contraindications": ["Pregnancy without practitioner review", "Acute diarrhea", "Children without practitioner review"],
+    "sourceRefs": ["AFI", "CHARAKA"],
+    "riskLevel": "caution"
+  },
+  {
+    "name": "Trikatu",
+    "category": "Digestive stimulant powder",
+    "ingredients": ["Shunthi", "Maricha", "Pippali"],
+    "traditionalIndication": "Traditionally used for manda agni and kapha-associated heaviness.",
+    "doshaRelevance": ["kapha", "vata"],
+    "anupana": "Often honey or warm water in traditional contexts; practitioner guided.",
+    "cautions": ["Can aggravate burning, acidity, ulcers, or strong pitta signs"],
+    "contraindications": ["Pregnancy without practitioner review", "Active gastritis symptoms", "Blood thinners without clinician review"],
+    "sourceRefs": ["AFI", "ASHTANGA"],
+    "riskLevel": "caution"
+  },
+  {
+    "name": "Hingvastak",
+    "category": "Digestive spice formulation",
+    "ingredients": ["Hingu", "Shunthi", "Maricha", "Pippali", "Ajwain", "Cumin", "Black cumin", "Rock salt"],
+    "traditionalIndication": "Traditionally used for vata-type gas, bloating, and sluggish digestion.",
+    "doshaRelevance": ["vata", "kapha"],
+    "anupana": "Traditionally taken with warm food or ghee depending on context; practitioner guided.",
+    "cautions": ["Contains salt and heating spices", "May aggravate acidity or hypertension"],
+    "contraindications": ["Hypertension without clinician review", "Pregnancy without practitioner review"],
+    "sourceRefs": ["AFI", "ASHTANGA"],
+    "riskLevel": "caution"
+  },
+  {
+    "name": "Sitopaladi",
+    "category": "Respiratory powder",
+    "ingredients": ["Sugar candy", "Vamsha rochana", "Pippali", "Ela", "Tvak"],
+    "traditionalIndication": "Traditionally used for cough, throat comfort, and mild kapha-pitta respiratory patterns.",
+    "doshaRelevance": ["kapha", "pitta"],
+    "anupana": "Honey is commonly referenced; avoid honey for infants and use practitioner guidance.",
+    "cautions": ["Sugar content may be unsuitable for diabetes or glucose control issues"],
+    "contraindications": ["Diabetes medication without clinician review", "Children without practitioner review"],
+    "sourceRefs": ["AFI"],
+    "riskLevel": "caution"
+  },
+  {
+    "name": "Talisadi",
+    "category": "Respiratory and digestive powder",
+    "ingredients": ["Talisapatra", "Maricha", "Shunthi", "Pippali", "Vamsha rochana", "Ela", "Tvak", "Sugar"],
+    "traditionalIndication": "Traditionally used for kapha-associated cough with digestive sluggishness.",
+    "doshaRelevance": ["kapha", "vata"],
+    "anupana": "Honey or warm water in traditional contexts; practitioner guided.",
+    "cautions": ["Heating spices and sugar may not suit acidity, diabetes, or sensitive stomach"],
+    "contraindications": ["Diabetes medication without clinician review", "Pregnancy without practitioner review", "Children without practitioner review"],
+    "sourceRefs": ["AFI"],
+    "riskLevel": "caution"
+  },
+  {
+    "name": "Chyawanprash",
+    "category": "Rasayana avalehya",
+    "ingredients": ["Amalaki", "Dashmool group", "Ghee", "Sesame oil", "Honey", "Sugar", "Spices"],
+    "traditionalIndication": "Traditionally used as rasayana and respiratory-strength support.",
+    "doshaRelevance": ["vata", "pitta", "kapha"],
+    "anupana": "Usually taken as avalehya; context and product composition matter.",
+    "cautions": ["Sugar-rich", "Complex ingredients require allergy and medicine review"],
+    "contraindications": ["Diabetes medication without clinician review", "Known ingredient allergy"],
+    "sourceRefs": ["CHARAKA", "AFI"],
+    "riskLevel": "caution"
+  },
+  {
+    "name": "Dashmool",
+    "category": "Ten-root group",
+    "ingredients": ["Bilva", "Agnimantha", "Shyonaka", "Patala", "Gambhari", "Brihati", "Kantakari", "Gokshura", "Shalaparni", "Prishniparni"],
+    "traditionalIndication": "Traditionally used for vata-kapha patterns, joint support, and respiratory contexts.",
+    "doshaRelevance": ["vata", "kapha"],
+    "anupana": "Often decoction or formulation-specific vehicle; practitioner guided.",
+    "cautions": ["Botanical identity and formulation quality matter"],
+    "contraindications": ["Pregnancy without practitioner review", "Serious chronic disease without clinician review"],
+    "sourceRefs": ["CHARAKA", "AFI"],
+    "riskLevel": "caution"
+  },
+  {
+    "name": "Kanchanar Guggulu",
+    "category": "Guggulu formulation",
+    "ingredients": ["Kanchanar bark", "Triphala", "Trikatu", "Varuna", "Ela", "Tvak", "Patra", "Guggulu"],
+    "traditionalIndication": "Traditionally used in kapha-related glandular swelling contexts under practitioner care.",
+    "doshaRelevance": ["kapha", "vata"],
+    "anupana": "Varies by clinical context; qualified supervision required.",
+    "cautions": ["Possible interactions with thyroid medicines, anticoagulants, and chronic disease medicines"],
+    "contraindications": ["Thyroid medication without clinician review", "Blood thinners without clinician review", "Pregnancy without practitioner review"],
+    "sourceRefs": ["AFI", "WHO-SAFETY"],
+    "riskLevel": "physician-only"
+  },
+  {
+    "name": "Punarnava Mandur",
+    "category": "Classical iron-containing formulation",
+    "ingredients": ["Punarnava", "Trivrit", "Shunthi", "Maricha", "Pippali", "Vidanga", "Devadaru", "Chitraka", "Mandura as per classical formulary"],
+    "traditionalIndication": "Traditionally used in anemia-related and fluid-balance contexts under qualified supervision.",
+    "doshaRelevance": ["kapha", "pitta", "vata"],
+    "anupana": "Practitioner directed only.",
+    "cautions": ["Contains processed mineral ingredient", "Requires diagnosis, quality assurance, and monitoring"],
+    "contraindications": ["Pregnancy without clinician review", "Children without clinician review", "Liver or kidney disease without clinician review"],
+    "sourceRefs": ["AFI", "WHO-SAFETY"],
+    "riskLevel": "physician-only"
+  },
+  {
+    "name": "Avipattikar",
+    "category": "Pitta digestive formulation",
+    "ingredients": ["Triphala", "Trikatu", "Musta", "Vidanga", "Ela", "Patra", "Lavanga", "Trivrit", "Sugar"],
+    "traditionalIndication": "Traditionally used for pitta-associated acidity and digestive discomfort under guidance.",
+    "doshaRelevance": ["pitta", "vata"],
+    "anupana": "Often warm water; individualized guidance is preferred.",
+    "cautions": ["May loosen stool", "Sugar content may matter for diabetes"],
+    "contraindications": ["Pregnancy without practitioner review", "Diabetes medication without clinician review", "Acute diarrhea"],
+    "sourceRefs": ["AFI"],
+    "riskLevel": "caution"
+  }
+]

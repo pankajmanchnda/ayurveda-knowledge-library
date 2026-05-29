@@ -1,0 +1,5 @@
+{
+  "vata": ["dryness", "gas", "bloating", "constipation", "anxiety", "restless", "insomnia", "cold", "variable appetite", "cramping", "tremor", "irregular"],
+  "pitta": ["burning", "acidity", "loose stool", "diarrhea", "irritability", "heat", "rash", "redness", "inflammation", "strong hunger", "sweating", "sour"],
+  "kapha": ["heaviness", "mucus", "congestion", "sluggish", "lethargy", "dullness", "swelling", "water retention", "low appetite", "sleepy", "sticky", "cold damp"]
+}

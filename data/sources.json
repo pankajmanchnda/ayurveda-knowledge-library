@@ -1,0 +1,37 @@
+[
+  {
+    "id": "CHARAKA",
+    "title": "Charaka Samhita",
+    "note": "Classical Ayurvedic source for dravya, diet, lifestyle, dosha, agni, and clinical reasoning traditions."
+  },
+  {
+    "id": "SUSHRUTA",
+    "title": "Sushruta Samhita",
+    "note": "Classical Ayurvedic source with descriptions of substances, surgical tradition, pathology, and safety-oriented clinical judgment."
+  },
+  {
+    "id": "ASHTANGA",
+    "title": "Ashtanga Hridaya",
+    "note": "Classical compendium frequently referenced for dosha, agni, chikitsa principles, and common formulations."
+  },
+  {
+    "id": "API",
+    "title": "Ayurvedic Pharmacopoeia of India",
+    "note": "Government pharmacopoeial monographs for identity, quality parameters, and selected Ayurvedic materia medica."
+  },
+  {
+    "id": "AFI",
+    "title": "Ayurvedic Formulary of India",
+    "note": "Government formulary reference for classical Ayurvedic formulations and composition standards."
+  },
+  {
+    "id": "CCRAS-AYUSH",
+    "title": "CCRAS / Ministry of AYUSH Sources",
+    "note": "Institutional educational and research materials from Indian government Ayurveda bodies."
+  },
+  {
+    "id": "WHO-SAFETY",
+    "title": "WHO Herbal Medicine Safety Guidance",
+    "note": "General safety guidance for herbal medicines, pharmacovigilance, quality, interactions, and consumer risk reduction."
+  }
+]
