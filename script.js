@@ -8,7 +8,8 @@ const state = {
   saved: {
     favorites: [],
     compare: [],
-    history: []
+    history: [],
+    consultant: []
   }
 };
 
@@ -86,17 +87,19 @@ function bindControls() {
   const consultantForm = document.getElementById("consultantForm");
   consultantForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    runConsultantGuide(document.getElementById("consultantMessage").value);
+    submitConsultantMessage(document.getElementById("consultantMessage").value);
   });
   document.querySelectorAll("[data-consultant-prompt]").forEach((button) => {
     button.addEventListener("click", () => {
       document.getElementById("consultantMessage").value = button.dataset.consultantPrompt;
-      runConsultantGuide(button.dataset.consultantPrompt);
+      submitConsultantMessage(button.dataset.consultantPrompt);
     });
   });
   document.getElementById("clearConsultant").addEventListener("click", () => {
     document.getElementById("consultantMessage").value = "";
-    document.getElementById("consultantResponse").innerHTML = `<div class="empty-state">The guide will respond here. It checks red flags first, then safety rules, then possible dosha patterns.</div>`;
+    state.saved.consultant = [];
+    persistSavedState();
+    renderConsultantThread();
   });
   setupVoiceInput();
 }
@@ -149,6 +152,7 @@ function renderAll() {
   renderSafetyRules();
   renderSources();
   renderWorkspace();
+  renderConsultantThread();
 }
 
 function renderLoadError(error) {
@@ -714,7 +718,7 @@ function setupVoiceInput() {
     listening = false;
     button.textContent = "Start voice input";
     button.setAttribute("aria-pressed", "false");
-    status.textContent = textarea.value ? "Voice note captured. Review it, then generate the educational response." : "Voice input stopped.";
+    status.textContent = textarea.value ? "Voice message captured. Review it, then send it into the conversation." : "Voice input stopped.";
     status.classList.remove("listening");
   });
 
@@ -727,26 +731,40 @@ function setupVoiceInput() {
   });
 }
 
-function runConsultantGuide(message) {
+function submitConsultantMessage(message) {
   const cleanMessage = message.trim();
-  const response = document.getElementById("consultantResponse");
   if (!cleanMessage) {
-    response.innerHTML = `<div class="empty-state">Write a short note first. Include symptoms, medicines, allergies, pregnancy/lactation status, and known diagnoses if relevant.</div>`;
+    document.getElementById("consultantResponse").innerHTML = `<div class="empty-state">Write a short note first. Include symptoms, medicines, allergies, pregnancy/lactation status, and known diagnoses if relevant.</div>`;
     return;
   }
 
-  const text = normalize(cleanMessage);
+  state.saved.consultant.push({
+    role: "user",
+    text: cleanMessage,
+    createdAt: new Date().toISOString()
+  });
+  state.saved.consultant.push({
+    role: "guide",
+    html: buildConsultantReply(),
+    createdAt: new Date().toISOString()
+  });
+  document.getElementById("consultantMessage").value = "";
+  state.saved.consultant = state.saved.consultant.slice(-24);
+  persistSavedState();
+  renderConsultantThread();
+}
+
+function buildConsultantReply() {
+  const transcript = consultantTranscript();
+  const text = normalize(transcript);
   const flags = redFlags.filter((flag) => text.includes(flag));
   if (flags.length) {
-    response.innerHTML = `
-      <div class="consultant-message">
-        <div class="warning-box">
-          <strong>Seek medical care promptly.</strong> I noticed possible red-flag language: ${escapeHtml(flags.join(", "))}. I will not suggest herbs or formulations for this situation.
-        </div>
-        <p>This educational guide is not for urgent care, diagnosis, or emergency treatment. Please contact a qualified clinician or local medical services.</p>
+    return `
+      <div class="warning-box">
+        <strong>Seek medical care promptly.</strong> I noticed possible red-flag language in the conversation: ${escapeHtml(flags.join(", "))}. I will not suggest herbs or formulations for this situation.
       </div>
+      <p>This educational guide is not for urgent care, diagnosis, or emergency treatment. Please contact a qualified clinician or local medical services.</p>
     `;
-    return;
   }
 
   const input = inferConsultantInput(text);
@@ -757,28 +775,61 @@ function runConsultantGuide(message) {
   const options = chooseSupportOptions(dominant, text, safety);
   const safetyText = safety.length ? safety.map(readableSafety).join(", ") : "No major safety trigger detected from this short note.";
 
-  response.innerHTML = `
-    <div class="consultant-message">
-      <div class="info-box">
-        <strong>Vaidya-style educational guide:</strong> I can help organize your note into Ayurveda research patterns, but I cannot diagnose, prescribe, or replace a qualified physician or vaidya.
-      </div>
-      <h3>What I would clarify first</h3>
-      <ul>
-        ${consultantQuestions(text).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-      </ul>
-      <h3>Possible pattern lens</h3>
-      <p>Your note leans toward <strong>${escapeHtml(dominant)}</strong>. ${escapeHtml(agni)}</p>
-      <h3>Safety screen</h3>
-      <p>${escapeHtml(safetyText)}</p>
-      <h3>Supportive options to discuss</h3>
-      <ul>
-        ${renderConsultantOptions(options)}
-      </ul>
-      <h3>Low-risk next steps</h3>
-      <ul>
-        ${lifestyleSupport(dominant).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-      </ul>
+  return `
+    <div class="info-box">
+      <strong>Vaidya-style educational guide:</strong> I will keep using the full conversation for context until you clear it. I can organize Ayurveda research patterns, but I cannot diagnose, prescribe, or replace a qualified physician or vaidya.
     </div>
+    <h3>What I would clarify next</h3>
+    <ul>
+      ${consultantQuestions(text).map((item) => `<li>${escapeHtml(item)}</li>`).join("") || "<li>Share any change in symptoms, medicines, allergies, pregnancy/lactation status, or known diagnoses so the safety screen stays current.</li>"}
+    </ul>
+    <h3>Possible pattern lens</h3>
+    <p>Across the conversation so far, the note leans toward <strong>${escapeHtml(dominant)}</strong>. ${escapeHtml(agni)}</p>
+    <h3>Safety screen</h3>
+    <p>${escapeHtml(safetyText)}</p>
+    <h3>Supportive options to discuss</h3>
+    <ul>
+      ${renderConsultantOptions(options)}
+    </ul>
+    <h3>Low-risk next steps</h3>
+    <ul>
+      ${lifestyleSupport(dominant).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function consultantTranscript() {
+  return state.saved.consultant
+    .filter((turn) => turn.role === "user")
+    .map((turn) => turn.text)
+    .join("\n");
+}
+
+function renderConsultantThread() {
+  const response = document.getElementById("consultantResponse");
+  if (!response) return;
+  const turns = state.saved.consultant || [];
+  if (!turns.length) {
+    response.innerHTML = `<div class="empty-state">The guide will respond here. It keeps a two-way conversation until you click Clear. It checks red flags first, then safety rules, then possible dosha patterns.</div>`;
+    return;
+  }
+  response.innerHTML = `
+    <div class="consultant-thread">
+      ${turns.map(renderConsultantTurn).join("")}
+    </div>
+  `;
+  response.scrollTop = response.scrollHeight;
+}
+
+function renderConsultantTurn(turn) {
+  const isUser = turn.role === "user";
+  const label = isUser ? "You" : "Guide";
+  const content = isUser ? `<p>${escapeHtml(turn.text)}</p>` : turn.html;
+  return `
+    <article class="consultant-turn ${isUser ? "user-turn" : "guide-turn"}">
+      <div class="consultant-turn-label">${label}</div>
+      <div class="consultant-message">${content}</div>
+    </article>
   `;
 }
 
@@ -823,10 +874,11 @@ function loadSavedState() {
     state.saved = {
       favorites: Array.isArray(saved.favorites) ? saved.favorites : [],
       compare: Array.isArray(saved.compare) ? saved.compare : [],
-      history: Array.isArray(saved.history) ? saved.history : []
+      history: Array.isArray(saved.history) ? saved.history : [],
+      consultant: Array.isArray(saved.consultant) ? saved.consultant : []
     };
   } catch {
-    state.saved = { favorites: [], compare: [], history: [] };
+    state.saved = { favorites: [], compare: [], history: [], consultant: [] };
   }
 }
 

@@ -372,12 +372,12 @@
             <p class="eyebrow">Free rule-based conversation</p>
             <h2>Vaidya-style Guide</h2>
           </div>
-          <p>Ask in your own words and receive a conservative educational response shaped like a practitioner conversation. No AI service, account, or server is used.</p>
+          <p>Ask follow-up questions in your own words. The guide keeps the conversation until you clear it. No AI service, account, or server is used.</p>
         </div>
         <div class="consultant-layout">
           <form class="consultant-box" id="consultantForm">
             <label>
-              <span>Your note</span>
+              <span>Your message</span>
               <textarea id="consultantMessage" rows="6" placeholder="Example: I have bloating after meals, irregular appetite, and light sleep. I take thyroid medicine."></textarea>
             </label>
             <div class="voice-controls">
@@ -391,12 +391,12 @@
               <button type="button" data-consultant-prompt="I am pregnant and have nausea and abdominal pain.">Pregnancy safety</button>
             </div>
             <div class="form-actions">
-              <button class="primary-button" type="submit">Generate educational response</button>
-              <button class="secondary-button" type="button" id="clearConsultant">Clear</button>
+              <button class="primary-button" type="submit">Send message</button>
+              <button class="secondary-button" type="button" id="clearConsultant">Clear conversation</button>
             </div>
           </form>
           <div class="consultant-response" id="consultantResponse" aria-live="polite">
-            <div class="empty-state">The guide will respond here. It checks red flags first, then safety rules, then possible dosha patterns.</div>
+            <div class="empty-state">The guide will respond here. It keeps a two-way conversation until you click Clear. It checks red flags first, then safety rules, then possible dosha patterns.</div>
           </div>
         </div>
       </section>

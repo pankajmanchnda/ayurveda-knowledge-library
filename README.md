@@ -13,7 +13,7 @@ This tool is for educational research only. It does not diagnose, treat, cure, o
 - Herb and formulation libraries with search, dosha filters, and risk filters
 - Expanded curated starter set: 66 herb/reference entries and 40 formulations
 - Dynamic browser-only workspace with saved items, comparison, and assessment history
-- Vaidya-style conversation guide that is rule-based, local-only, and not a real AI medical consultant
+- Vaidya-style two-way conversation guide that is rule-based, local-only, and not a real AI medical consultant
 - Browser-native voice-to-text for the guide when speech recognition is supported
 - Rule-based symptom assessment with red-flag suppression
 - Contraindication rules for pregnancy, lactation, children, elderly users, medicines, chronic disease, and allergies
@@ -30,7 +30,9 @@ ayurveda-knowledge-library/
 ├── README.md
 ├── data/
 │   ├── herbs.json
+│   ├── herbs_extra.json
 │   ├── formulations.json
+│   ├── formulations_extra.json
 │   ├── dosha_symptoms.json
 │   ├── contraindications.json
 │   ├── symptom_map.json
@@ -81,6 +83,7 @@ The app remains fully free and static. Dynamic features use the browser only:
 - Assessment history is stored in `localStorage`
 - No personal data is sent to a server
 - The Vaidya-style guide runs locally from rules and library data, not from an AI API
+- The Vaidya-style conversation remains in the browser until the user clears it
 - Voice-to-text uses browser speech recognition when available and does not add any paid service
 - No account, backend, API key, or paid service is used
 

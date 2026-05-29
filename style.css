@@ -786,6 +786,12 @@ main {
   padding: 18px;
 }
 
+.consultant-response {
+  max-height: 720px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
 .prompt-chips {
   display: flex;
   flex-wrap: wrap;
@@ -811,6 +817,54 @@ main {
 .consultant-message {
   display: grid;
   gap: 12px;
+}
+
+.consultant-thread {
+  display: grid;
+  gap: 14px;
+}
+
+.consultant-turn {
+  display: grid;
+  gap: 6px;
+}
+
+.consultant-turn-label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 820;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.consultant-turn .consultant-message {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.user-turn {
+  justify-items: end;
+}
+
+.user-turn .consultant-turn-label {
+  padding-right: 4px;
+}
+
+.user-turn .consultant-message {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  max-width: min(92%, 680px);
+}
+
+.guide-turn {
+  justify-items: start;
+}
+
+.guide-turn .consultant-message {
+  background: #fbfcf8;
+  max-width: 100%;
 }
 
 .consultant-message h3 {
