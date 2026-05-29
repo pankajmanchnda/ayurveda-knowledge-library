@@ -968,6 +968,1625 @@ window.AKL_DATA = {
         "WHO-SAFETY"
       ],
       "riskLevel": "physician-only"
+    },
+    {
+      "name": "Nimba",
+      "sanskritName": "Nimba",
+      "commonName": "Neem",
+      "botanicalName": "Azadirachta indica",
+      "partUsed": "Leaf, bark, seed oil",
+      "rasa": [
+        "bitter",
+        "astringent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "skin support contexts",
+        "bitter digestive support",
+        "traditional krimighna contexts"
+      ],
+      "cautions": [
+        "Neem oil and concentrated extracts require caution",
+        "May irritate digestion or skin in sensitive users"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Liver disease without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Tulasi",
+      "sanskritName": "Tulasi",
+      "commonName": "Holy basil",
+      "botanicalName": "Ocimum tenuiflorum",
+      "partUsed": "Leaf",
+      "rasa": [
+        "pungent",
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "respiratory comfort",
+        "kapha-type congestion support",
+        "daily devotional and household use"
+      ],
+      "cautions": [
+        "May interact with anticoagulant or glucose-lowering medicines",
+        "Can feel heating in high-pitta presentations"
+      ],
+      "contraindications": [
+        "Blood thinners without clinician review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Pippali",
+      "sanskritName": "Pippali",
+      "commonName": "Long pepper",
+      "botanicalName": "Piper longum",
+      "partUsed": "Fruit, root",
+      "rasa": [
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "unctuous"
+      ],
+      "virya": "mildly heating",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "digestive fire support",
+        "respiratory kapha contexts",
+        "bioavailability support in formulas"
+      ],
+      "cautions": [
+        "Heating and pungent",
+        "Use caution with acidity, ulcers, pregnancy, and medicines"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Active gastritis or ulcer symptoms",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Maricha",
+      "sanskritName": "Maricha",
+      "commonName": "Black pepper",
+      "botanicalName": "Piper nigrum",
+      "partUsed": "Fruit",
+      "rasa": [
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "digestive stimulation",
+        "kapha-type heaviness",
+        "spice-based support"
+      ],
+      "cautions": [
+        "Heating and sharp",
+        "May worsen burning, reflux, or mouth irritation"
+      ],
+      "contraindications": [
+        "Active gastritis or ulcer symptoms",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Shunthi",
+      "sanskritName": "Shunthi",
+      "commonName": "Dry ginger",
+      "botanicalName": "Zingiber officinale",
+      "partUsed": "Rhizome",
+      "rasa": [
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "unctuous"
+      ],
+      "virya": "heating",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "digestive comfort",
+        "nausea tendency support",
+        "cold-type heaviness"
+      ],
+      "cautions": [
+        "Can feel heating",
+        "Use caution with blood thinners and acidity"
+      ],
+      "contraindications": [
+        "Blood thinners without clinician review",
+        "High-pitta burning symptoms without review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Haridra",
+      "sanskritName": "Haridra",
+      "commonName": "Turmeric",
+      "botanicalName": "Curcuma longa",
+      "partUsed": "Rhizome",
+      "rasa": [
+        "bitter",
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "pitta"
+      ],
+      "traditionalUses": [
+        "skin and inflammatory support contexts",
+        "metabolic support",
+        "culinary use"
+      ],
+      "cautions": [
+        "May interact with blood thinners or diabetes medicines",
+        "Concentrated extracts differ from culinary use"
+      ],
+      "contraindications": [
+        "Blood thinners without clinician review",
+        "Gallbladder disease without clinician review",
+        "Pregnancy without practitioner review for concentrated use"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Daruharidra",
+      "sanskritName": "Daruharidra",
+      "commonName": "Indian barberry",
+      "botanicalName": "Berberis aristata",
+      "partUsed": "Stem, root bark",
+      "rasa": [
+        "bitter",
+        "astringent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "pitta"
+      ],
+      "traditionalUses": [
+        "skin support contexts",
+        "metabolic support contexts",
+        "bitter cleansing traditions"
+      ],
+      "cautions": [
+        "Berberine-containing herbs may interact with medicines",
+        "Use caution in pregnancy and liver disease"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Diabetes medication without clinician review",
+        "Liver disease without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Musta",
+      "sanskritName": "Musta",
+      "commonName": "Nut grass",
+      "botanicalName": "Cyperus rotundus",
+      "partUsed": "Rhizome",
+      "rasa": [
+        "bitter",
+        "pungent",
+        "astringent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "digestive discomfort support",
+        "ama-type heaviness",
+        "loose stool tendency under guidance"
+      ],
+      "cautions": [
+        "May be drying",
+        "Persistent diarrhea requires clinician review"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Severe dehydration or blood in stool"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Kutki",
+      "sanskritName": "Kutki",
+      "commonName": "Picrorhiza",
+      "botanicalName": "Picrorhiza kurroa",
+      "partUsed": "Rhizome",
+      "rasa": [
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "liver support traditions",
+        "bitter digestive support",
+        "pitta-kapha clearing contexts"
+      ],
+      "cautions": [
+        "Strong bitter herb requiring supervision",
+        "May loosen stool or interact with medicines"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Liver disease without clinician review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Bhumyamalaki",
+      "sanskritName": "Bhumyamalaki",
+      "commonName": "Stonebreaker",
+      "botanicalName": "Phyllanthus niruri / Phyllanthus amarus",
+      "partUsed": "Whole plant",
+      "rasa": [
+        "bitter",
+        "astringent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "urinary support contexts",
+        "liver support traditions",
+        "pitta-type heat support"
+      ],
+      "cautions": [
+        "May interact with diabetes or blood pressure medicines",
+        "Chronic liver or kidney disease requires medical review"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Kidney disease without clinician review",
+        "Liver disease without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Bhringaraja",
+      "sanskritName": "Bhringaraja",
+      "commonName": "False daisy",
+      "botanicalName": "Eclipta prostrata",
+      "partUsed": "Whole plant",
+      "rasa": [
+        "bitter",
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "hair and scalp oil traditions",
+        "liver support traditions",
+        "rasayana contexts"
+      ],
+      "cautions": [
+        "Internal use needs review in liver disease or medicines",
+        "Quality and identity matter"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Liver disease without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Jatamansi",
+      "sanskritName": "Jatamansi",
+      "commonName": "Spikenard",
+      "botanicalName": "Nardostachys jatamansi",
+      "partUsed": "Rhizome",
+      "rasa": [
+        "bitter",
+        "astringent",
+        "sweet"
+      ],
+      "guna": [
+        "light",
+        "unctuous"
+      ],
+      "virya": "cooling",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "vata",
+        "pitta"
+      ],
+      "traditionalUses": [
+        "sleep and calm support traditions",
+        "mind support contexts",
+        "pitta-vata calming"
+      ],
+      "cautions": [
+        "May add to sedative effects",
+        "Use only with clinician review if taking psychiatric or sedative medicines"
+      ],
+      "contraindications": [
+        "Sedative medication without clinician review",
+        "Pregnancy without practitioner review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Vacha",
+      "sanskritName": "Vacha",
+      "commonName": "Sweet flag",
+      "botanicalName": "Acorus calamus",
+      "partUsed": "Rhizome",
+      "rasa": [
+        "pungent",
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "speech and cognition traditions",
+        "kapha clearing contexts",
+        "digestive stimulation"
+      ],
+      "cautions": [
+        "Safety concerns vary by chemotype and regulation",
+        "Not for self-directed use"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Liver disease without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Shankhapushpi",
+      "sanskritName": "Shankhapushpi",
+      "commonName": "Shankhapushpi",
+      "botanicalName": "Convolvulus pluricaulis / Clitoria ternatea traditions vary",
+      "partUsed": "Whole plant",
+      "rasa": [
+        "bitter",
+        "astringent",
+        "sweet"
+      ],
+      "guna": [
+        "unctuous",
+        "slimy"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "vata",
+        "pitta"
+      ],
+      "traditionalUses": [
+        "memory and calm support traditions",
+        "sleep quality support",
+        "pitta-vata mind support"
+      ],
+      "cautions": [
+        "May add to sedative effects",
+        "Botanical identity can vary"
+      ],
+      "contraindications": [
+        "Sedative medication without clinician review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Vidanga",
+      "sanskritName": "Vidanga",
+      "commonName": "False black pepper",
+      "botanicalName": "Embelia ribes",
+      "partUsed": "Fruit",
+      "rasa": [
+        "pungent",
+        "astringent"
+      ],
+      "guna": [
+        "light",
+        "dry",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "traditional krimighna contexts",
+        "digestive clearing",
+        "ama-related formulas"
+      ],
+      "cautions": [
+        "Sharp herb; not for pregnancy or self-directed use in children",
+        "Use caution with acidity"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Active gastritis or ulcer symptoms"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Varuna",
+      "sanskritName": "Varuna",
+      "commonName": "Three-leaved caper",
+      "botanicalName": "Crataeva nurvala",
+      "partUsed": "Bark",
+      "rasa": [
+        "bitter",
+        "astringent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "urinary tract support traditions",
+        "kapha accumulations",
+        "glandular support formulas"
+      ],
+      "cautions": [
+        "Urinary symptoms can require medical assessment",
+        "Use caution with kidney disease"
+      ],
+      "contraindications": [
+        "Kidney disease without clinician review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Pashanabheda",
+      "sanskritName": "Pashanabheda",
+      "commonName": "Stone breaker saxifrage",
+      "botanicalName": "Bergenia ligulata",
+      "partUsed": "Rhizome",
+      "rasa": [
+        "astringent",
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "urinary comfort traditions",
+        "stone-related traditional contexts under supervision",
+        "pitta urinary heat support"
+      ],
+      "cautions": [
+        "Kidney stones, pain, fever, or blood in urine require medical care",
+        "Do not use as emergency support"
+      ],
+      "contraindications": [
+        "Blood in urine",
+        "Kidney disease without clinician review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Manjistha",
+      "sanskritName": "Manjistha",
+      "commonName": "Indian madder",
+      "botanicalName": "Rubia cordifolia",
+      "partUsed": "Root",
+      "rasa": [
+        "bitter",
+        "astringent",
+        "sweet"
+      ],
+      "guna": [
+        "heavy",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "skin support contexts",
+        "lymph and blood-cleansing traditions",
+        "pitta-kapha patterns"
+      ],
+      "cautions": [
+        "May interact with blood thinners",
+        "Use caution with pregnancy and medicines"
+      ],
+      "contraindications": [
+        "Blood thinners without clinician review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Sariva",
+      "sanskritName": "Sariva",
+      "commonName": "Indian sarsaparilla",
+      "botanicalName": "Hemidesmus indicus",
+      "partUsed": "Root",
+      "rasa": [
+        "sweet",
+        "bitter"
+      ],
+      "guna": [
+        "heavy",
+        "unctuous"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "pitta",
+        "vata"
+      ],
+      "traditionalUses": [
+        "cooling support",
+        "skin comfort traditions",
+        "pitta soothing contexts"
+      ],
+      "cautions": [
+        "May be too cooling or heavy for some kapha patterns",
+        "Use caution with chronic disease medicines"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Chronic illness without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "low"
+    },
+    {
+      "name": "Khadira",
+      "sanskritName": "Khadira",
+      "commonName": "Cutch tree",
+      "botanicalName": "Acacia catechu",
+      "partUsed": "Heartwood",
+      "rasa": [
+        "astringent",
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "oral and skin support traditions",
+        "astringent cleansing",
+        "kapha-pitta contexts"
+      ],
+      "cautions": [
+        "Drying and astringent",
+        "Use caution with constipation or severe dryness"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Severe constipation without review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Lodhra",
+      "sanskritName": "Lodhra",
+      "commonName": "Lodh tree",
+      "botanicalName": "Symplocos racemosa",
+      "partUsed": "Bark",
+      "rasa": [
+        "astringent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "women health traditions under guidance",
+        "skin and discharge support contexts",
+        "astringent use"
+      ],
+      "cautions": [
+        "Gynecologic symptoms require qualified review",
+        "Not for self-directed pregnancy use"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Unexplained bleeding without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Bala",
+      "sanskritName": "Bala",
+      "commonName": "Country mallow",
+      "botanicalName": "Sida cordifolia",
+      "partUsed": "Root, whole plant",
+      "rasa": [
+        "sweet"
+      ],
+      "guna": [
+        "heavy",
+        "unctuous"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "vata",
+        "pitta"
+      ],
+      "traditionalUses": [
+        "strength support traditions",
+        "vata calming oil preparations",
+        "convalescence contexts"
+      ],
+      "cautions": [
+        "Some species/constituents raise stimulant and regulatory concerns",
+        "Use caution with hypertension and medicines"
+      ],
+      "contraindications": [
+        "Hypertension without clinician review",
+        "Pregnancy without practitioner review",
+        "Sedative or stimulant medication without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Atibala",
+      "sanskritName": "Atibala",
+      "commonName": "Indian mallow",
+      "botanicalName": "Abutilon indicum",
+      "partUsed": "Root, whole plant",
+      "rasa": [
+        "sweet"
+      ],
+      "guna": [
+        "heavy",
+        "unctuous"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "vata",
+        "pitta"
+      ],
+      "traditionalUses": [
+        "strength and nourishment traditions",
+        "vata-pitta support contexts",
+        "urinary soothing traditions"
+      ],
+      "cautions": [
+        "Use caution in pregnancy, chronic disease, and polypharmacy",
+        "Quality identification matters"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Kidney disease without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Rasna",
+      "sanskritName": "Rasna",
+      "commonName": "Rasna",
+      "botanicalName": "Pluchea lanceolata",
+      "partUsed": "Leaf, root",
+      "rasa": [
+        "bitter"
+      ],
+      "guna": [
+        "heavy"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "joint comfort traditions",
+        "vata-kapha stiffness contexts",
+        "oil and decoction traditions"
+      ],
+      "cautions": [
+        "Joint pain with swelling, fever, trauma, or chronic disease needs clinician review"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Autoimmune disease without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Nirgundi",
+      "sanskritName": "Nirgundi",
+      "commonName": "Five-leaved chaste tree",
+      "botanicalName": "Vitex negundo",
+      "partUsed": "Leaf, seed, root",
+      "rasa": [
+        "bitter",
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "joint and muscle comfort traditions",
+        "external oil use",
+        "kapha-vata stiffness"
+      ],
+      "cautions": [
+        "Internal use requires guidance",
+        "May be heating or drying"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Eranda",
+      "sanskritName": "Eranda",
+      "commonName": "Castor",
+      "botanicalName": "Ricinus communis",
+      "partUsed": "Root, processed oil",
+      "rasa": [
+        "sweet",
+        "pungent",
+        "astringent"
+      ],
+      "guna": [
+        "heavy",
+        "unctuous",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "vata-related bowel support under guidance",
+        "joint support traditions",
+        "oil applications"
+      ],
+      "cautions": [
+        "Castor oil is strongly laxative",
+        "Seeds are toxic and not for use"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Diarrhea or dehydration"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Shigru",
+      "sanskritName": "Shigru",
+      "commonName": "Moringa",
+      "botanicalName": "Moringa oleifera",
+      "partUsed": "Leaf, seed, bark",
+      "rasa": [
+        "pungent",
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "dry",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "nutritive leaf use",
+        "kapha-type heaviness support",
+        "traditional swelling contexts"
+      ],
+      "cautions": [
+        "Heating and sharp; use caution with thyroid medicines and pregnancy"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Thyroid medication without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Lasuna",
+      "sanskritName": "Lasuna",
+      "commonName": "Garlic",
+      "botanicalName": "Allium sativum",
+      "partUsed": "Bulb",
+      "rasa": [
+        "pungent"
+      ],
+      "guna": [
+        "heavy",
+        "unctuous",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "circulatory support traditions",
+        "digestive stimulation",
+        "kapha-vata patterns"
+      ],
+      "cautions": [
+        "May interact with blood thinners and surgery planning",
+        "May aggravate reflux or heat"
+      ],
+      "contraindications": [
+        "Blood thinners without clinician review",
+        "Upcoming surgery without clinician review",
+        "Active gastritis or ulcer symptoms"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Hingu",
+      "sanskritName": "Hingu",
+      "commonName": "Asafoetida",
+      "botanicalName": "Ferula asafoetida",
+      "partUsed": "Oleogum resin",
+      "rasa": [
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "sharp",
+        "unctuous"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "gas and bloating traditions",
+        "vata digestive support",
+        "spice-based use"
+      ],
+      "cautions": [
+        "Heating and pungent",
+        "Use caution in pregnancy and reflux"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Active gastritis or ulcer symptoms"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Lavanga",
+      "sanskritName": "Lavanga",
+      "commonName": "Clove",
+      "botanicalName": "Syzygium aromaticum",
+      "partUsed": "Flower bud",
+      "rasa": [
+        "pungent",
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "unctuous"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "oral comfort traditions",
+        "digestive spice use",
+        "kapha-type throat comfort"
+      ],
+      "cautions": [
+        "Essential oil can irritate skin and mucosa",
+        "Heating in pitta patterns"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review for concentrated use",
+        "Active gastritis or ulcer symptoms"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Ela",
+      "sanskritName": "Ela",
+      "commonName": "Cardamom",
+      "botanicalName": "Elettaria cardamomum",
+      "partUsed": "Seed",
+      "rasa": [
+        "pungent",
+        "sweet"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "kapha",
+        "vata",
+        "pitta"
+      ],
+      "traditionalUses": [
+        "digestive comfort",
+        "breath and oral freshness traditions",
+        "gentle spice support"
+      ],
+      "cautions": [
+        "Usually low risk as culinary spice",
+        "Concentrated use needs review with gallbladder disease"
+      ],
+      "contraindications": [
+        "Known allergy",
+        "Gallbladder disease without clinician review for concentrated use"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "low"
+    },
+    {
+      "name": "Tvak",
+      "sanskritName": "Tvak",
+      "commonName": "Cinnamon",
+      "botanicalName": "Cinnamomum verum / Cinnamomum cassia",
+      "partUsed": "Bark",
+      "rasa": [
+        "pungent",
+        "sweet",
+        "astringent"
+      ],
+      "guna": [
+        "light",
+        "dry",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "digestive warming",
+        "kapha-type heaviness",
+        "circulatory warmth traditions"
+      ],
+      "cautions": [
+        "Heating spice; cassia cinnamon has coumarin safety concerns in high intake",
+        "May interact with diabetes medicines"
+      ],
+      "contraindications": [
+        "Diabetes medication without clinician review",
+        "Liver disease without clinician review for high intake"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Tejapatra",
+      "sanskritName": "Tejapatra",
+      "commonName": "Indian bay leaf",
+      "botanicalName": "Cinnamomum tamala",
+      "partUsed": "Leaf",
+      "rasa": [
+        "pungent",
+        "sweet"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "culinary digestive support",
+        "kapha-vata spice use",
+        "aromatic formulations"
+      ],
+      "cautions": [
+        "Usually low risk as culinary spice",
+        "Concentrated use needs review in pregnancy"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review for concentrated use",
+        "Known allergy"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "low"
+    },
+    {
+      "name": "Methi",
+      "sanskritName": "Methi",
+      "commonName": "Fenugreek",
+      "botanicalName": "Trigonella foenum-graecum",
+      "partUsed": "Seed",
+      "rasa": [
+        "bitter",
+        "pungent"
+      ],
+      "guna": [
+        "heavy",
+        "unctuous"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "digestive support",
+        "metabolic support traditions",
+        "lactation folk use only under guidance"
+      ],
+      "cautions": [
+        "May lower blood glucose",
+        "May interact with anticoagulants and diabetes medicines"
+      ],
+      "contraindications": [
+        "Diabetes medication without clinician review",
+        "Blood thinners without clinician review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Kumari",
+      "sanskritName": "Kumari",
+      "commonName": "Aloe",
+      "botanicalName": "Aloe vera",
+      "partUsed": "Leaf gel, latex",
+      "rasa": [
+        "bitter",
+        "sweet"
+      ],
+      "guna": [
+        "heavy",
+        "unctuous",
+        "slimy"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "pitta",
+        "vata"
+      ],
+      "traditionalUses": [
+        "skin soothing external use",
+        "pitta support traditions",
+        "women health formulas under guidance"
+      ],
+      "cautions": [
+        "Aloe latex is laxative and not the same as gel",
+        "Internal use requires review"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Diarrhea or dehydration",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Bakuchi",
+      "sanskritName": "Bakuchi",
+      "commonName": "Babchi",
+      "botanicalName": "Psoralea corylifolia",
+      "partUsed": "Seed",
+      "rasa": [
+        "pungent",
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "skin pigment traditions under supervision",
+        "external application traditions",
+        "kapha-vata contexts"
+      ],
+      "cautions": [
+        "Photosensitizing and potentially irritating",
+        "Requires qualified supervision"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Liver disease without clinician review",
+        "Sensitive skin without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Chitraka",
+      "sanskritName": "Chitraka",
+      "commonName": "Leadwort",
+      "botanicalName": "Plumbago zeylanica",
+      "partUsed": "Root",
+      "rasa": [
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "dry",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "digestive fire traditions",
+        "ama-kapha clearing formulas",
+        "deepana contexts"
+      ],
+      "cautions": [
+        "Very heating and sharp",
+        "Not for self-directed use"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Active gastritis or ulcer symptoms",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Devadaru",
+      "sanskritName": "Devadaru",
+      "commonName": "Himalayan cedar",
+      "botanicalName": "Cedrus deodara",
+      "partUsed": "Heartwood",
+      "rasa": [
+        "bitter",
+        "pungent"
+      ],
+      "guna": [
+        "light",
+        "unctuous"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "vata",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "vata-kapha stiffness traditions",
+        "respiratory kapha support",
+        "aromatic formulations"
+      ],
+      "cautions": [
+        "Heating and aromatic",
+        "Use caution with pregnancy and chronic disease"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Chandana",
+      "sanskritName": "Chandana",
+      "commonName": "Sandalwood",
+      "botanicalName": "Santalum album",
+      "partUsed": "Heartwood",
+      "rasa": [
+        "bitter",
+        "sweet"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "cooling external traditions",
+        "pitta heat support",
+        "aromatic use"
+      ],
+      "cautions": [
+        "Internal use is not self-care",
+        "Sustainability and adulteration concerns"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Kidney disease without clinician review for internal use"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Ushira",
+      "sanskritName": "Ushira",
+      "commonName": "Vetiver",
+      "botanicalName": "Vetiveria zizanioides",
+      "partUsed": "Root",
+      "rasa": [
+        "bitter",
+        "sweet"
+      ],
+      "guna": [
+        "light",
+        "dry"
+      ],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "doshaEffect": [
+        "pitta",
+        "kapha"
+      ],
+      "traditionalUses": [
+        "cooling beverage traditions",
+        "pitta heat support",
+        "fragrant external use"
+      ],
+      "cautions": [
+        "May be too cooling for cold-dominant patterns",
+        "Use caution with chronic kidney disease"
+      ],
+      "contraindications": [
+        "Kidney disease without clinician review",
+        "Known allergy"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "low"
+    },
+    {
+      "name": "Apamarga",
+      "sanskritName": "Apamarga",
+      "commonName": "Prickly chaff flower",
+      "botanicalName": "Achyranthes aspera",
+      "partUsed": "Whole plant, seed",
+      "rasa": [
+        "pungent",
+        "bitter"
+      ],
+      "guna": [
+        "light",
+        "dry",
+        "sharp"
+      ],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "doshaEffect": [
+        "kapha",
+        "vata"
+      ],
+      "traditionalUses": [
+        "kapha clearing traditions",
+        "digestive and urinary contexts under guidance",
+        "external applications"
+      ],
+      "cautions": [
+        "Sharp and heating",
+        "Not for pregnancy or self-directed child use"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Kidney disease without clinician review"
+      ],
+      "sourceRefs": [
+        "API",
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
     }
   ],
   "formulations": [
@@ -1291,6 +2910,912 @@ window.AKL_DATA = {
         "AFI"
       ],
       "riskLevel": "caution"
+    },
+    {
+      "name": "Kaishore Guggulu",
+      "category": "Guggulu formulation",
+      "ingredients": [
+        "Guduchi",
+        "Triphala",
+        "Trikatu",
+        "Vidanga",
+        "Trivrit",
+        "Danti",
+        "Guggulu"
+      ],
+      "traditionalIndication": "Traditionally used in pitta-kapha inflammatory and skin-joint contexts under practitioner care.",
+      "doshaRelevance": [
+        "pitta",
+        "kapha",
+        "vata"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Guggulu formulas may interact with medicines",
+        "Requires review in chronic inflammatory or autoimmune disease"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Blood thinners without clinician review",
+        "Autoimmune disease without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Yogaraja Guggulu",
+      "category": "Guggulu formulation",
+      "ingredients": [
+        "Triphala",
+        "Trikatu",
+        "Chitraka",
+        "Vidanga",
+        "Guggulu",
+        "aromatic spices"
+      ],
+      "traditionalIndication": "Traditionally used in vata-kapha joint and stiffness contexts under qualified guidance.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Often paired with warm water or context-specific anupana by a vaidya.",
+      "cautions": [
+        "Heating and complex formula",
+        "Medicine interactions possible"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Blood thinners without clinician review",
+        "Liver or kidney disease without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Gokshuradi Guggulu",
+      "category": "Guggulu formulation",
+      "ingredients": [
+        "Gokshura",
+        "Triphala",
+        "Trikatu",
+        "Musta",
+        "Guggulu"
+      ],
+      "traditionalIndication": "Traditionally used in urinary and vata-kapha pelvic contexts under practitioner care.",
+      "doshaRelevance": [
+        "vata",
+        "kapha",
+        "pitta"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Urinary symptoms may need medical assessment",
+        "Guggulu interactions possible"
+      ],
+      "contraindications": [
+        "Blood in urine",
+        "Kidney disease without clinician review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Chandraprabha Vati",
+      "category": "Classical tablet formulation",
+      "ingredients": [
+        "Shilajit",
+        "Guggulu",
+        "Triphala",
+        "Trikatu",
+        "Musta",
+        "Vacha",
+        "various classical herbs"
+      ],
+      "traditionalIndication": "Traditionally used in urinary and metabolic contexts under qualified supervision.",
+      "doshaRelevance": [
+        "vata",
+        "kapha",
+        "pitta"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Complex formulation with higher safety review needs",
+        "Chronic urinary or metabolic symptoms require clinician review"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Kidney disease without clinician review",
+        "Diabetes medication without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Mahasudarshan Churna",
+      "category": "Bitter digestive formulation",
+      "ingredients": [
+        "Kirata Tikta",
+        "Triphala",
+        "Trikatu",
+        "Musta",
+        "Guduchi",
+        "many bitter herbs"
+      ],
+      "traditionalIndication": "Traditionally used in jvara and ama-pitta contexts under practitioner care.",
+      "doshaRelevance": [
+        "pitta",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed only, especially when fever is present.",
+      "cautions": [
+        "Fever can be a red flag and needs medical review when high or persistent",
+        "Bitter herbs may interact with medicines"
+      ],
+      "contraindications": [
+        "High fever",
+        "Pregnancy without practitioner review",
+        "Liver disease without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Abhayarishta",
+      "category": "Fermented digestive formulation",
+      "ingredients": [
+        "Haritaki",
+        "Vidanga",
+        "Madhuka",
+        "Dhataki",
+        "jaggery"
+      ],
+      "traditionalIndication": "Traditionally used for bowel regularity and vata-related constipation contexts under guidance.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed; fermented preparations contain naturally generated alcohol.",
+      "cautions": [
+        "May loosen stool",
+        "Contains sweetener and fermented alcohol content"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Diabetes medication without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Kutajarishta",
+      "category": "Fermented digestive formulation",
+      "ingredients": [
+        "Kutaja bark",
+        "Draksha",
+        "Madhuka",
+        "Gambhari",
+        "Dhataki"
+      ],
+      "traditionalIndication": "Traditionally used in loose-stool digestive contexts under qualified review.",
+      "doshaRelevance": [
+        "pitta",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed; fermented preparations contain naturally generated alcohol.",
+      "cautions": [
+        "Persistent diarrhea, dehydration, fever, or blood in stool requires medical care",
+        "Contains fermented alcohol content"
+      ],
+      "contraindications": [
+        "Blood in stool",
+        "Children without practitioner review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Dashamoolarishta",
+      "category": "Fermented vata formulation",
+      "ingredients": [
+        "Dashamula group",
+        "Dhataki",
+        "jaggery",
+        "aromatic herbs"
+      ],
+      "traditionalIndication": "Traditionally used in vata-related weakness and respiratory-joint contexts under guidance.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed; fermented preparations contain naturally generated alcohol.",
+      "cautions": [
+        "Contains sweetener and fermented alcohol content",
+        "Use caution with sedatives and chronic disease"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Sedative medication without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Arjunarishta",
+      "category": "Fermented cardiac-support formulation",
+      "ingredients": [
+        "Arjuna bark",
+        "Draksha",
+        "Madhuka",
+        "Dhataki",
+        "jaggery"
+      ],
+      "traditionalIndication": "Traditionally used for heart-support contexts under clinician and vaidya supervision.",
+      "doshaRelevance": [
+        "pitta",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Heart symptoms require medical evaluation",
+        "Contains fermented alcohol and sweetener"
+      ],
+      "contraindications": [
+        "Chest pain",
+        "Heart disease without clinician review",
+        "Blood pressure medicines without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Ashokarishta",
+      "category": "Fermented women-health formulation",
+      "ingredients": [
+        "Ashoka bark",
+        "Dhataki",
+        "Musta",
+        "Haritaki",
+        "jaggery"
+      ],
+      "traditionalIndication": "Traditionally used in gynecologic contexts under qualified supervision.",
+      "doshaRelevance": [
+        "pitta",
+        "kapha",
+        "vata"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Unexplained bleeding or pelvic pain requires medical review",
+        "Contains fermented alcohol and sweetener"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Unexplained bleeding without clinician review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Saraswatarishta",
+      "category": "Fermented mind-support formulation",
+      "ingredients": [
+        "Brahmi",
+        "Shatavari",
+        "Vidari",
+        "Vacha",
+        "Dhataki",
+        "jaggery"
+      ],
+      "traditionalIndication": "Traditionally used in memory, speech, and nervous-system support contexts under guidance.",
+      "doshaRelevance": [
+        "vata",
+        "pitta"
+      ],
+      "anupana": "Practitioner directed; fermented preparations contain naturally generated alcohol.",
+      "cautions": [
+        "May interact with sedatives or psychiatric medicines",
+        "Contains Vacha in some traditions"
+      ],
+      "contraindications": [
+        "Sedative medication without clinician review",
+        "Pregnancy without practitioner review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Drakshasava",
+      "category": "Fermented tonic formulation",
+      "ingredients": [
+        "Draksha",
+        "Dhataki",
+        "Madhuka",
+        "aromatic spices",
+        "sweetener"
+      ],
+      "traditionalIndication": "Traditionally used in weakness and pitta-vata digestive contexts under guidance.",
+      "doshaRelevance": [
+        "vata",
+        "pitta"
+      ],
+      "anupana": "Practitioner directed; fermented preparations contain naturally generated alcohol.",
+      "cautions": [
+        "Contains sweetener and fermented alcohol content",
+        "Not suitable for all metabolic contexts"
+      ],
+      "contraindications": [
+        "Diabetes medication without clinician review",
+        "Pregnancy without practitioner review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Kumaryasava",
+      "category": "Fermented aloe formulation",
+      "ingredients": [
+        "Kumari",
+        "Trikatu",
+        "Triphala",
+        "Dhataki",
+        "jaggery"
+      ],
+      "traditionalIndication": "Traditionally used in digestive and women-health contexts under qualified supervision.",
+      "doshaRelevance": [
+        "pitta",
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "May loosen stool",
+        "Contains fermented alcohol and sweetener"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Diarrhea or dehydration",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Jeerakarishta",
+      "category": "Fermented digestive formulation",
+      "ingredients": [
+        "Jiraka",
+        "Dhataki",
+        "jaggery",
+        "aromatic digestive herbs"
+      ],
+      "traditionalIndication": "Traditionally used in digestive and postpartum contexts only with qualified supervision.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed; fermented preparations contain naturally generated alcohol.",
+      "cautions": [
+        "Contains sweetener and fermented alcohol content",
+        "Postpartum and lactation use requires clinician review"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Lactation without practitioner review",
+        "Diabetes medication without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Brahma Rasayana",
+      "category": "Rasayana confection",
+      "ingredients": [
+        "Amalaki",
+        "Haritaki",
+        "Dashamula group",
+        "ghee",
+        "sesame oil",
+        "sugar or jaggery"
+      ],
+      "traditionalIndication": "Traditionally used as rasayana support under guidance, especially when digestion and context are appropriate.",
+      "doshaRelevance": [
+        "vata",
+        "pitta"
+      ],
+      "anupana": "Practitioner directed; suitability depends on agni and metabolic context.",
+      "cautions": [
+        "Sweet, heavy preparation",
+        "May be unsuitable in diabetes, ama, or kapha heaviness"
+      ],
+      "contraindications": [
+        "Diabetes medication without clinician review",
+        "Pregnancy without practitioner review",
+        "Acute digestive upset"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Agastya Haritaki",
+      "category": "Rasayana confection",
+      "ingredients": [
+        "Haritaki",
+        "Dashamula group",
+        "Pippali",
+        "ghee",
+        "sweetener"
+      ],
+      "traditionalIndication": "Traditionally used in respiratory rasayana contexts under practitioner guidance.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Sweet and warming formulation",
+        "Respiratory distress requires medical care"
+      ],
+      "contraindications": [
+        "Severe breathlessness",
+        "Diabetes medication without clinician review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Dhanvantaram Taila",
+      "category": "Medicated oil",
+      "ingredients": [
+        "Dashamula group",
+        "Bala",
+        "Yava",
+        "Kola",
+        "Kulatha",
+        "sesame oil"
+      ],
+      "traditionalIndication": "Traditionally used externally in vata-support oiling contexts under guidance.",
+      "doshaRelevance": [
+        "vata"
+      ],
+      "anupana": "External use only in this educational app.",
+      "cautions": [
+        "Patch test for skin sensitivity",
+        "Avoid on infected, broken, or inflamed skin unless supervised"
+      ],
+      "contraindications": [
+        "Known sesame allergy",
+        "Severe skin reaction",
+        "Pregnancy massage without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "low"
+    },
+    {
+      "name": "Mahanarayana Taila",
+      "category": "Medicated oil",
+      "ingredients": [
+        "Bala",
+        "Ashwagandha",
+        "Dashamula group",
+        "Rasna",
+        "sesame oil",
+        "aromatic herbs"
+      ],
+      "traditionalIndication": "Traditionally used externally for vata-related muscle and joint comfort contexts.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "External use only in this educational app.",
+      "cautions": [
+        "Patch test first",
+        "Joint pain with fever, trauma, or swelling requires medical review"
+      ],
+      "contraindications": [
+        "Known sesame allergy",
+        "Severe skin reaction",
+        "Autoimmune disease flare without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Anu Taila",
+      "category": "Nasal oil",
+      "ingredients": [
+        "Jivanti",
+        "Devadaru",
+        "Tvak",
+        "Usira",
+        "sesame oil",
+        "goat milk in classical process"
+      ],
+      "traditionalIndication": "Traditionally used in nasya contexts under practitioner guidance.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Nasya should be practitioner guided.",
+      "cautions": [
+        "Improper nasal use can irritate or worsen symptoms",
+        "Do not use during acute infection without review"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Acute sinus infection without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Brahmi Ghrita",
+      "category": "Medicated ghee",
+      "ingredients": [
+        "Brahmi",
+        "Vacha",
+        "Kushta",
+        "Shankhapushpi",
+        "ghee"
+      ],
+      "traditionalIndication": "Traditionally used in mind, memory, and nervous-system contexts under qualified guidance.",
+      "doshaRelevance": [
+        "vata",
+        "pitta"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Contains medicated ghee and sometimes Vacha depending on tradition",
+        "May interact with sedatives or psychiatric medicines"
+      ],
+      "contraindications": [
+        "Sedative medication without clinician review",
+        "Pregnancy without practitioner review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Triphala Ghrita",
+      "category": "Medicated ghee",
+      "ingredients": [
+        "Triphala",
+        "ghee"
+      ],
+      "traditionalIndication": "Traditionally used in eye and pitta-vata contexts under practitioner care.",
+      "doshaRelevance": [
+        "vata",
+        "pitta"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Eye symptoms require qualified eye evaluation",
+        "Heavy preparation may not suit slow digestion"
+      ],
+      "contraindications": [
+        "Eye pain or sudden vision change",
+        "Pregnancy without practitioner review",
+        "Acute diarrhea"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Sukumara Ghrita",
+      "category": "Medicated ghee",
+      "ingredients": [
+        "Dashamula group",
+        "Triphala",
+        "Trikatu",
+        "Eranda",
+        "ghee"
+      ],
+      "traditionalIndication": "Traditionally used in vata abdominal and gynecologic contexts under practitioner care.",
+      "doshaRelevance": [
+        "vata"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Contains laxative and heavy components",
+        "Abdominal pain can be a red flag"
+      ],
+      "contraindications": [
+        "Severe abdominal pain",
+        "Pregnancy without practitioner review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Balashwagandhadi Taila",
+      "category": "Medicated oil",
+      "ingredients": [
+        "Bala",
+        "Ashwagandha",
+        "Laksha",
+        "sesame oil"
+      ],
+      "traditionalIndication": "Traditionally used externally for vata-related strength and muscle comfort contexts.",
+      "doshaRelevance": [
+        "vata"
+      ],
+      "anupana": "External use only in this educational app.",
+      "cautions": [
+        "Patch test first",
+        "Avoid broken or infected skin"
+      ],
+      "contraindications": [
+        "Known sesame allergy",
+        "Severe skin reaction",
+        "Pregnancy massage without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Bilwadi Churna",
+      "category": "Digestive powder",
+      "ingredients": [
+        "Bilva",
+        "Musta",
+        "Dhanyaka",
+        "Shunthi",
+        "Mochras"
+      ],
+      "traditionalIndication": "Traditionally used in digestive loose-stool contexts under guidance.",
+      "doshaRelevance": [
+        "vata",
+        "kapha",
+        "pitta"
+      ],
+      "anupana": "Practitioner directed only if diarrhea or fever is present.",
+      "cautions": [
+        "Persistent diarrhea, dehydration, or blood in stool requires medical care",
+        "May constipate some users"
+      ],
+      "contraindications": [
+        "Blood in stool",
+        "Children without practitioner review",
+        "Pregnancy without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Dadimadi Ghrita",
+      "category": "Medicated ghee",
+      "ingredients": [
+        "Dadima",
+        "Dhanyaka",
+        "Chitraka",
+        "Pippali",
+        "ghee"
+      ],
+      "traditionalIndication": "Traditionally used in digestive and nourishment contexts under practitioner guidance.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed; suitability depends on agni.",
+      "cautions": [
+        "Contains heating digestive herbs and ghee",
+        "May not suit acidity or slow kapha-ama patterns"
+      ],
+      "contraindications": [
+        "Active gastritis or ulcer symptoms",
+        "Pregnancy without practitioner review",
+        "Diabetes medication without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "caution"
+    },
+    {
+      "name": "Hinguvachadi Churna",
+      "category": "Digestive powder",
+      "ingredients": [
+        "Hingu",
+        "Vacha",
+        "Pippali",
+        "Shunthi",
+        "Ajwain",
+        "Saindhava"
+      ],
+      "traditionalIndication": "Traditionally used for vata-kapha gas and digestive sluggishness under guidance.",
+      "doshaRelevance": [
+        "vata",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Heating and sharp formula",
+        "Contains Vacha in many traditions"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Active gastritis or ulcer symptoms"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Pushyanuga Churna",
+      "category": "Women-health powder",
+      "ingredients": [
+        "Lodhra",
+        "Patha",
+        "Musta",
+        "Arjuna",
+        "various astringent herbs"
+      ],
+      "traditionalIndication": "Traditionally used in gynecologic contexts under qualified supervision.",
+      "doshaRelevance": [
+        "pitta",
+        "kapha"
+      ],
+      "anupana": "Practitioner directed only.",
+      "cautions": [
+        "Unexplained bleeding or pelvic pain requires clinician review",
+        "Astringent and complex formulation"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Unexplained bleeding without clinician review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Arogyavardhini Vati",
+      "category": "Classical tablet formulation",
+      "ingredients": [
+        "Kutki",
+        "Triphala",
+        "Shilajit",
+        "Guggulu",
+        "processed mineral ingredients as per formulary"
+      ],
+      "traditionalIndication": "Traditionally used in liver-metabolic and skin contexts under physician-level supervision.",
+      "doshaRelevance": [
+        "pitta",
+        "kapha"
+      ],
+      "anupana": "Physician directed only.",
+      "cautions": [
+        "May contain processed mineral ingredients",
+        "Requires quality assurance, diagnosis, and monitoring"
+      ],
+      "contraindications": [
+        "Liver disease without clinician review",
+        "Pregnancy without practitioner review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Praval Panchamrit",
+      "category": "Mineral-containing formulation",
+      "ingredients": [
+        "Pravala",
+        "Mukta shukti",
+        "Shankha",
+        "Kapardika",
+        "Varatika preparations as per classical process"
+      ],
+      "traditionalIndication": "Traditionally used in pitta-acidity contexts only under qualified supervision.",
+      "doshaRelevance": [
+        "pitta"
+      ],
+      "anupana": "Physician directed only.",
+      "cautions": [
+        "Mineral-containing formulation excluded from self-care suggestions",
+        "Quality assurance and clinician review are essential"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Kidney disease without clinician review",
+        "Children without practitioner review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
+    },
+    {
+      "name": "Laghu Sutshekhar Rasa",
+      "category": "Rasaushadhi formulation",
+      "ingredients": [
+        "Purified mineral ingredient as per classical process",
+        "Shunthi",
+        "other classical ingredients"
+      ],
+      "traditionalIndication": "Traditionally used in pitta-head and acidity contexts only under physician-level supervision.",
+      "doshaRelevance": [
+        "pitta",
+        "vata"
+      ],
+      "anupana": "Physician directed only.",
+      "cautions": [
+        "Rasaushadhi is not appropriate for self-directed use",
+        "Requires qualified diagnosis, quality assurance, and monitoring"
+      ],
+      "contraindications": [
+        "Pregnancy without practitioner review",
+        "Children without practitioner review",
+        "Kidney or liver disease without clinician review"
+      ],
+      "sourceRefs": [
+        "AFI"
+      ],
+      "riskLevel": "physician-only"
     }
   ],
   "sources": [
