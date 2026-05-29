@@ -13,6 +13,7 @@ This tool is for educational research only. It does not diagnose, treat, cure, o
 - Herb and formulation libraries with search, dosha filters, and risk filters
 - Dynamic browser-only workspace with saved items, comparison, and assessment history
 - Vaidya-style conversation guide that is rule-based, local-only, and not a real AI medical consultant
+- Browser-native voice-to-text for the guide when speech recognition is supported
 - Rule-based symptom assessment with red-flag suppression
 - Contraindication rules for pregnancy, lactation, children, elderly users, medicines, chronic disease, and allergies
 - Conservative educational language and source references
@@ -79,6 +80,7 @@ The app remains fully free and static. Dynamic features use the browser only:
 - Assessment history is stored in `localStorage`
 - No personal data is sent to a server
 - The Vaidya-style guide runs locally from rules and library data, not from an AI API
+- Voice-to-text uses browser speech recognition when available and does not add any paid service
 - No account, backend, API key, or paid service is used
 
 The assessment engine:
