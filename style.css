@@ -275,6 +275,20 @@ a:focus-visible {
   padding-top: 0;
 }
 
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.coverage-grid h3 {
+  margin-bottom: 8px;
+}
+
+.coverage-grid p {
+  margin: 0;
+}
+
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -691,6 +705,7 @@ legend {
 
   .toolbar,
   .consultant-layout,
+  .coverage-grid,
   .card-grid,
   .form-grid,
   .form-grid.three,
@@ -731,24 +746,28 @@ main {
   order: 5;
 }
 
-#herbs {
+#coverage {
   order: 6;
 }
 
-#formulations {
+#herbs {
   order: 7;
 }
 
-#workspace {
+#formulations {
   order: 8;
 }
 
-#safety {
+#workspace {
   order: 9;
 }
 
-#sources {
+#safety {
   order: 10;
+}
+
+#sources {
+  order: 11;
 }
 
 
