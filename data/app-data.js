@@ -3877,8 +3877,8 @@ window.AKL_DATA = {
         "nursing"
       ],
       "rule": "Breastfeeding requires individualized safety review because constituents may pass to the infant.",
-      "action": "Suppress suggestions and advise qualified review.",
-      "riskLevel": "physician-only"
+      "action": "Show conservative options only with qualified review.",
+      "riskLevel": "caution"
     },
     {
       "key": "children",
@@ -3916,8 +3916,8 @@ window.AKL_DATA = {
         "hyperthyroid"
       ],
       "rule": "Some herbs may affect thyroid status or medicine timing.",
-      "action": "Suppress suggestions involving endocrine-active herbs and advise clinician review.",
-      "riskLevel": "physician-only"
+      "action": "Show conservative options and flag clinician review for medicine timing and monitoring.",
+      "riskLevel": "caution"
     },
     {
       "key": "blood-thinners",
@@ -3932,8 +3932,8 @@ window.AKL_DATA = {
         "anticoagulant"
       ],
       "rule": "Herbs may interact with anticoagulant or antiplatelet medicines.",
-      "action": "Suppress suggestions and advise clinician review.",
-      "riskLevel": "physician-only"
+      "action": "Show conservative options and flag clinician review before use.",
+      "riskLevel": "caution"
     },
     {
       "key": "diabetes-medication",
@@ -3946,8 +3946,8 @@ window.AKL_DATA = {
         "diabetes medication"
       ],
       "rule": "Glucose-lowering medicines can interact with herbs that affect blood sugar.",
-      "action": "Suppress suggestions and advise clinician review.",
-      "riskLevel": "physician-only"
+      "action": "Show conservative options and flag clinician review before use.",
+      "riskLevel": "caution"
     },
     {
       "key": "hypertension",

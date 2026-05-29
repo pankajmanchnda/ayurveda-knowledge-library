@@ -105,8 +105,9 @@ Still excluded from self-care suggestions:
 The assessment engine:
 
 - Checks red flags before any educational suggestions
-- Checks contraindication rules second
-- Suppresses herb suggestions for high-risk contexts
+- Checks contraindication rules second with simple negation handling for phrases such as "no allergy" or "not pregnant"
+- Suppresses herb suggestions only for red flags and hard-stop contexts such as pregnancy, children, liver disease, or kidney disease
+- Shows conservative educational options with caution notes for medicine and allergy contexts
 - Uses only rule-based scoring for Vata, Pitta, and Kapha tendencies
 - Does not provide dosages
 - Does not recommend emergency treatment

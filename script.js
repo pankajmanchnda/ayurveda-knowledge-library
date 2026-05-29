@@ -448,7 +448,7 @@ function runAssessment(formData) {
     input.pregnancy
   ].join(" "));
 
-  const foundRedFlags = redFlags.filter((flag) => text.includes(flag));
+  const foundRedFlags = redFlags.filter((flag) => hasAffirmedTerm(text, flag));
   if (foundRedFlags.length || input.severity === "severe") {
     renderRedFlagResult(foundRedFlags, input.severity);
     saveAssessmentHistory({
@@ -519,24 +519,31 @@ function detectSafety(input, text) {
   if (age >= 70) hits.push("elderly");
 
   state.contraindications.forEach((rule) => {
-    if (rule.triggers.some((trigger) => text.includes(normalize(trigger)))) hits.push(rule.key);
+    if (rule.triggers.some((trigger) => hasAffirmedTerm(text, trigger))) hits.push(rule.key);
   });
 
   return [...new Set(hits)];
 }
 
+function hasAffirmedTerm(text, term) {
+  const normalizedText = normalize(text);
+  const normalizedTerm = normalize(term);
+  let index = normalizedText.indexOf(normalizedTerm);
+  while (index !== -1) {
+    const before = normalizedText.slice(Math.max(0, index - 48), index);
+    const negatedBefore = /\b(no|not|none|without|denies|deny|negative for|free of|never)\b[\w\s,;/-]{0,44}$/.test(before);
+    if (!negatedBefore) return true;
+    index = normalizedText.indexOf(normalizedTerm, index + normalizedTerm.length);
+  }
+  return false;
+}
+
+function hasHardStopSafety(safety) {
+  return safety.some((key) => ["pregnancy", "children", "liver-disease", "kidney-disease"].includes(key));
+}
+
 function chooseSupportOptions(dominant, text, safety) {
-  const seriousReview = [
-    "pregnancy",
-    "lactation",
-    "children",
-    "liver-disease",
-    "kidney-disease",
-    "blood-thinners",
-    "diabetes-medication",
-    "thyroid-medication"
-  ];
-  if (safety.some((key) => seriousReview.includes(key))) return [];
+  if (hasHardStopSafety(safety)) return [];
 
   const matches = [];
   Object.entries(state.symptomMap).forEach(([symptom, config]) => {
@@ -547,6 +554,7 @@ function chooseSupportOptions(dominant, text, safety) {
     if (dominant.includes("vata")) matches.push("Triphala", "Dashmool", "Ashwagandha");
     if (dominant.includes("pitta")) matches.push("Amalaki", "Guduchi", "Shatavari");
     if (dominant.includes("kapha")) matches.push("Trikatu", "Punarnava", "Hingvastak");
+    if (dominant.includes("unclear")) matches.push("Jeera", "Dhaniya", "Saunf");
   }
 
   const allReferenceItems = [...state.herbs, ...state.formulations];
@@ -586,12 +594,10 @@ function renderRedFlagResult(flags, severity) {
 }
 
 function renderAssessment(result) {
-  const safetyText = result.safety.length
-    ? result.safety.map((key) => readableSafety(key)).join(", ")
-    : "No major safety trigger detected from the provided fields.";
+  const safetyText = safetySummary(result.safety, "the provided fields");
   const optionList = result.options.length
     ? result.options.map((item) => `<li>${escapeHtml(getTitle(item))}: traditionally used for ${escapeHtml((item.traditionalIndication || item.traditionalUses || []).toString())}. Discuss with a qualified vaidya before use.</li>`).join("")
-    : "<li>No herb or formulation suggestions shown because practitioner review is preferred for this safety context or the pattern is unclear.</li>";
+    : "<li>No herb or formulation suggestions shown because this context needs qualified medical or Ayurvedic review first.</li>";
 
   document.getElementById("assessmentResult").innerHTML = `
     <div class="assessment-panel">
@@ -757,7 +763,7 @@ function submitConsultantMessage(message) {
 function buildConsultantReply() {
   const transcript = consultantTranscript();
   const text = normalize(transcript);
-  const flags = redFlags.filter((flag) => text.includes(flag));
+  const flags = redFlags.filter((flag) => hasAffirmedTerm(text, flag));
   if (flags.length) {
     return `
       <div class="warning-box">
@@ -773,7 +779,7 @@ function buildConsultantReply() {
   const agni = inferAgni(input);
   const safety = detectSafety(input, text);
   const options = chooseSupportOptions(dominant, text, safety);
-  const safetyText = safety.length ? safety.map(readableSafety).join(", ") : "No major safety trigger detected from this short note.";
+  const safetyText = safetySummary(safety, "this conversation");
 
   return `
     <div class="info-box">
@@ -803,6 +809,15 @@ function consultantTranscript() {
     .filter((turn) => turn.role === "user")
     .map((turn) => turn.text)
     .join("\n");
+}
+
+function safetySummary(safety, contextLabel) {
+  if (!safety.length) return `No major safety trigger detected from ${contextLabel}.`;
+  const label = safety.map(readableSafety).join(", ");
+  if (hasHardStopSafety(safety)) {
+    return `Needs qualified review before herb or formulation options: ${label}.`;
+  }
+  return `Caution noted, but not a hard stop for educational options: ${label}. Discuss suitability with a qualified vaidya or physician, especially before using herbs with medicines.`;
 }
 
 function renderConsultantThread() {
@@ -839,7 +854,7 @@ function inferConsultantInput(text) {
     medicines: text,
     allergies: text,
     diagnosis: text,
-    pregnancy: text.includes("pregnant") || text.includes("pregnancy") ? "pregnant" : text.includes("breastfeeding") || text.includes("lactating") ? "lactating" : "none",
+    pregnancy: hasAffirmedTerm(text, "trying to conceive") ? "trying" : hasAffirmedTerm(text, "pregnant") || hasAffirmedTerm(text, "pregnancy") ? "pregnant" : hasAffirmedTerm(text, "breastfeeding") || hasAffirmedTerm(text, "lactating") ? "lactating" : "none",
     duration: text.includes("months") || text.includes("years") || text.includes("chronic") ? "chronic" : "subacute",
     severity: "moderate",
     digestion: text.includes("gas") || text.includes("bloating") || text.includes("irregular appetite") ? "irregular" : text.includes("acidity") || text.includes("burning") || text.includes("strong hunger") ? "sharp" : text.includes("low appetite") || text.includes("heaviness") || text.includes("sluggish") ? "slow" : "",
