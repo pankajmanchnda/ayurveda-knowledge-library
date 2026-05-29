@@ -80,6 +80,23 @@ function bindControls() {
   form.addEventListener("reset", () => {
     document.getElementById("assessmentResult").innerHTML = "";
   });
+
+  const consultantForm = document.getElementById("consultantForm");
+  consultantForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    runConsultantGuide(document.getElementById("consultantMessage").value);
+  });
+  document.querySelectorAll("[data-consultant-prompt]").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.getElementById("consultantMessage").value = button.dataset.consultantPrompt;
+      runConsultantGuide(button.dataset.consultantPrompt);
+    });
+  });
+  document.getElementById("clearConsultant").addEventListener("click", () => {
+    document.getElementById("consultantMessage").value = "";
+    document.getElementById("consultantResponse").innerHTML = `<div class="empty-state">The guide will respond here. It checks red flags first, then safety rules, then possible dosha patterns.</div>`;
+  });
+  setupVoiceInput();
 }
 
 async function loadData() {
@@ -628,6 +645,162 @@ function lifestyleSupport(dominant) {
     return ["Light regular movement suited to capacity", "Avoid daytime oversleeping when possible", "Warm simple meals and mindful portions"];
   }
   return ["Track symptoms and triggers", "Prioritize rest, hydration, and regular meals", "Seek qualified review if symptoms persist or worsen"];
+}
+
+
+
+function setupVoiceInput() {
+  const button = document.getElementById("voiceButton");
+  const status = document.getElementById("voiceStatus");
+  const textarea = document.getElementById("consultantMessage");
+  if (!button || !status || !textarea) return;
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    button.disabled = true;
+    status.textContent = "Voice input is not supported in this browser. You can still type your note.";
+    return;
+  }
+
+  const recognition = new SpeechRecognition();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  recognition.lang = "en-US";
+  let listening = false;
+  let finalTranscript = "";
+
+  button.addEventListener("click", () => {
+    if (listening) {
+      recognition.stop();
+      return;
+    }
+    finalTranscript = textarea.value ? `${textarea.value.trim()} ` : "";
+    recognition.start();
+  });
+
+  recognition.addEventListener("start", () => {
+    listening = true;
+    button.textContent = "Stop voice input";
+    button.setAttribute("aria-pressed", "true");
+    status.textContent = "Listening. Speak naturally, then stop when finished.";
+    status.classList.add("listening");
+  });
+
+  recognition.addEventListener("result", (event) => {
+    let interimTranscript = "";
+    for (let i = event.resultIndex; i < event.results.length; i += 1) {
+      const transcript = event.results[i][0].transcript;
+      if (event.results[i].isFinal) finalTranscript += `${transcript.trim()} `;
+      else interimTranscript += transcript;
+    }
+    textarea.value = `${finalTranscript}${interimTranscript}`.trim();
+  });
+
+  recognition.addEventListener("end", () => {
+    listening = false;
+    button.textContent = "Start voice input";
+    button.setAttribute("aria-pressed", "false");
+    status.textContent = textarea.value ? "Voice note captured. Review it, then generate the educational response." : "Voice input stopped.";
+    status.classList.remove("listening");
+  });
+
+  recognition.addEventListener("error", (event) => {
+    listening = false;
+    button.textContent = "Start voice input";
+    button.setAttribute("aria-pressed", "false");
+    status.textContent = event.error === "not-allowed" ? "Microphone permission was blocked. Allow microphone access in the browser to use voice input." : "Voice input stopped. You can type instead.";
+    status.classList.remove("listening");
+  });
+}
+
+function runConsultantGuide(message) {
+  const cleanMessage = message.trim();
+  const response = document.getElementById("consultantResponse");
+  if (!cleanMessage) {
+    response.innerHTML = `<div class="empty-state">Write a short note first. Include symptoms, medicines, allergies, pregnancy/lactation status, and known diagnoses if relevant.</div>`;
+    return;
+  }
+
+  const text = normalize(cleanMessage);
+  const flags = redFlags.filter((flag) => text.includes(flag));
+  if (flags.length) {
+    response.innerHTML = `
+      <div class="consultant-message">
+        <div class="warning-box">
+          <strong>Seek medical care promptly.</strong> I noticed possible red-flag language: ${escapeHtml(flags.join(", "))}. I will not suggest herbs or formulations for this situation.
+        </div>
+        <p>This educational guide is not for urgent care, diagnosis, or emergency treatment. Please contact a qualified clinician or local medical services.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const input = inferConsultantInput(text);
+  const scores = scoreDoshas(input, text);
+  const dominant = dominantDosha(scores);
+  const agni = inferAgni(input);
+  const safety = detectSafety(input, text);
+  const options = chooseSupportOptions(dominant, text, safety);
+  const safetyText = safety.length ? safety.map(readableSafety).join(", ") : "No major safety trigger detected from this short note.";
+
+  response.innerHTML = `
+    <div class="consultant-message">
+      <div class="info-box">
+        <strong>Vaidya-style educational guide:</strong> I can help organize your note into Ayurveda research patterns, but I cannot diagnose, prescribe, or replace a qualified physician or vaidya.
+      </div>
+      <h3>What I would clarify first</h3>
+      <ul>
+        ${consultantQuestions(text).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+      </ul>
+      <h3>Possible pattern lens</h3>
+      <p>Your note leans toward <strong>${escapeHtml(dominant)}</strong>. ${escapeHtml(agni)}</p>
+      <h3>Safety screen</h3>
+      <p>${escapeHtml(safetyText)}</p>
+      <h3>Supportive options to discuss</h3>
+      <ul>
+        ${renderConsultantOptions(options)}
+      </ul>
+      <h3>Low-risk next steps</h3>
+      <ul>
+        ${lifestyleSupport(dominant).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
+function inferConsultantInput(text) {
+  return {
+    mainSymptom: text,
+    medicines: text,
+    allergies: text,
+    diagnosis: text,
+    pregnancy: text.includes("pregnant") || text.includes("pregnancy") ? "pregnant" : text.includes("breastfeeding") || text.includes("lactating") ? "lactating" : "none",
+    duration: text.includes("months") || text.includes("years") || text.includes("chronic") ? "chronic" : "subacute",
+    severity: "moderate",
+    digestion: text.includes("gas") || text.includes("bloating") || text.includes("irregular appetite") ? "irregular" : text.includes("acidity") || text.includes("burning") || text.includes("strong hunger") ? "sharp" : text.includes("low appetite") || text.includes("heaviness") || text.includes("sluggish") ? "slow" : "",
+    stool: text.includes("constipation") || text.includes("hard stool") || text.includes("dry stool") ? "dry" : text.includes("loose stool") || text.includes("diarrhea") ? "loose" : text.includes("sticky stool") ? "sticky" : "",
+    sleep: text.includes("insomnia") || text.includes("light sleep") || text.includes("poor sleep") ? "light" : text.includes("sleepy") || text.includes("heavy sleep") ? "heavy" : "",
+    stress: text.includes("anxiety") || text.includes("anxious") || text.includes("restless") ? "anxious" : text.includes("irritable") || text.includes("anger") ? "irritable" : text.includes("dull") || text.includes("low motivation") ? "withdrawn" : "",
+    temperature: text.includes("cold") || text.includes("dry") ? "cold" : text.includes("hot") || text.includes("heat") || text.includes("burning") ? "hot" : text.includes("damp") || text.includes("mucus") ? "damp" : ""
+  };
+}
+
+function consultantQuestions(text) {
+  const questions = [];
+  if (!text.includes("medicine") && !text.includes("medication") && !text.includes("tablet")) questions.push("Are you taking any medicines, supplements, blood thinners, thyroid medicines, diabetes medicines, sedatives, or blood pressure medicines?");
+  if (!text.includes("pregnant") && !text.includes("breastfeeding") && !text.includes("lactating")) questions.push("Is there any pregnancy, breastfeeding, child, elderly, liver, kidney, autoimmune, heart, or chronic disease context?");
+  if (!text.includes("allerg")) questions.push("Any known allergy to herbs, spices, foods, medicines, or plant families?");
+  if (!text.includes("duration") && !text.includes("days") && !text.includes("weeks") && !text.includes("months")) questions.push("How long has this been happening, and is it getting better, worse, or recurring?");
+  return questions.slice(0, 4);
+}
+
+function renderConsultantOptions(options) {
+  if (!options.length) {
+    return `<li>I would not list herbs from this note alone. The safety context or pattern needs qualified review first.</li>`;
+  }
+  return options
+    .map((item) => `<li><strong>${escapeHtml(getTitle(item))}</strong> may be worth discussing with a qualified vaidya. Traditional context: ${escapeHtml((item.traditionalIndication || item.traditionalUses || []).toString())}</li>`)
+    .join("");
 }
 
 function loadSavedState() {
