@@ -18,10 +18,11 @@
           Menu
         </button>
         <div class="nav-links" id="navLinks">
+          <a href="#assessment">Symptom Assessment</a>
+          <a href="#consultant">Vaidya-style Guide</a>
           <a href="#herbs">Herb Library</a>
           <a href="#formulations">Formulation Library</a>
           <a href="#workspace">Workspace</a>
-          <a href="#assessment">Symptom Assessment</a>
           <a href="#safety">Safety Rules</a>
           <a href="#sources">Sources</a>
         </div>
@@ -44,10 +45,11 @@
       </section>
 
       <section class="section compact-nav" aria-label="Library sections">
+        <a href="#assessment">Symptom Assessment</a>
+        <a href="#consultant">Vaidya-style Guide</a>
         <a href="#herbs">Herb Library</a>
         <a href="#formulations">Formulation Library</a>
         <a href="#workspace">Workspace</a>
-        <a href="#assessment">Symptom Assessment</a>
         <a href="#safety">Safety Rules</a>
         <a href="#sources">Sources</a>
       </section>
@@ -340,6 +342,41 @@
         </form>
 
         <div class="assessment-result" id="assessmentResult" aria-live="polite"></div>
+      </section>
+
+      <section class="section section-muted" id="consultant">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Free rule-based conversation</p>
+            <h2>Vaidya-style Guide</h2>
+          </div>
+          <p>Ask in your own words and receive a conservative educational response shaped like a practitioner conversation. No AI service, account, or server is used.</p>
+        </div>
+        <div class="consultant-layout">
+          <form class="consultant-box" id="consultantForm">
+            <label>
+              <span>Your note</span>
+              <textarea id="consultantMessage" rows="6" placeholder="Example: I have bloating after meals, irregular appetite, and light sleep. I take thyroid medicine."></textarea>
+            </label>
+            <div class="voice-controls">
+              <button class="secondary-button" type="button" id="voiceButton" aria-pressed="false">Start voice input</button>
+              <span id="voiceStatus" class="voice-status">Voice input uses your browser if supported.</span>
+            </div>
+            <div class="prompt-chips" aria-label="Example prompts">
+              <button type="button" data-consultant-prompt="I have gas and bloating after meals with irregular appetite and light sleep.">Bloating</button>
+              <button type="button" data-consultant-prompt="I feel acidity and burning with strong hunger and irritability.">Acidity</button>
+              <button type="button" data-consultant-prompt="I have heaviness, congestion, low appetite, and sluggish energy.">Heaviness</button>
+              <button type="button" data-consultant-prompt="I am pregnant and have nausea and abdominal pain.">Pregnancy safety</button>
+            </div>
+            <div class="form-actions">
+              <button class="primary-button" type="submit">Generate educational response</button>
+              <button class="secondary-button" type="button" id="clearConsultant">Clear</button>
+            </div>
+          </form>
+          <div class="consultant-response" id="consultantResponse" aria-live="polite">
+            <div class="empty-state">The guide will respond here. It checks red flags first, then safety rules, then possible dosha patterns.</div>
+          </div>
+        </div>
       </section>
 
       <section class="section section-muted" id="safety">
