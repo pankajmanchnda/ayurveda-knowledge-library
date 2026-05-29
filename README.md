@@ -11,6 +11,7 @@ This tool is for educational research only. It does not diagnose, treat, cure, o
 - Static HTML, CSS, JavaScript, and JSON only
 - No backend, API keys, paid services, build step, or external libraries
 - Herb and formulation libraries with search, dosha filters, and risk filters
+- Expanded curated starter set: 66 herb/reference entries and 40 formulations
 - Dynamic browser-only workspace with saved items, comparison, and assessment history
 - Vaidya-style conversation guide that is rule-based, local-only, and not a real AI medical consultant
 - Browser-native voice-to-text for the guide when speech recognition is supported
@@ -82,6 +83,21 @@ The app remains fully free and static. Dynamic features use the browser only:
 - The Vaidya-style guide runs locally from rules and library data, not from an AI API
 - Voice-to-text uses browser speech recognition when available and does not add any paid service
 - No account, backend, API key, or paid service is used
+
+## Coverage Scope
+
+This app is not a complete Ayurvedic pharmacopoeia. Ayurveda has no single closed master list across classical texts, regional nighantus, official pharmacopoeias, physician lineages, and proprietary products. Government sources such as the Ayurvedic Pharmacopoeia of India and Ayurvedic Formulary of India provide defensible official reference sets, but they are still curated regulatory publications rather than the whole living tradition.
+
+The MVP now includes a broader starter library of commonly referenced herbs, culinary dravyas, rasayana items, guggulu preparations, fermented formulations, medicated ghees, oils, and selected physician-only references.
+
+Still excluded from self-care suggestions:
+
+- Rasaushadhi and bhasma preparations
+- Toxic or purification-required herbs
+- Disease-specific prescription protocols
+- Pediatric and pregnancy protocols
+- Proprietary commercial products
+- Items needing diagnosis, lab monitoring, urgent medical review, or qualified physician/vaidya supervision
 
 The assessment engine:
 
