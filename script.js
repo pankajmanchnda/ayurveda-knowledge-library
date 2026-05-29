@@ -14,7 +14,9 @@ const state = {
 
 const paths = {
   herbs: "data/herbs.json",
+  herbsExtra: "data/herbs_extra.json",
   formulations: "data/formulations.json",
+  formulationsExtra: "data/formulations_extra.json",
   sources: "data/sources.json",
   contraindications: "data/contraindications.json",
   symptomMap: "data/symptom_map.json",
@@ -111,6 +113,8 @@ async function loadData() {
     entries.forEach(([key, value]) => {
       state[key] = value;
     });
+    state.herbs = uniqueReferenceItems([...(state.herbs || []), ...(state.herbsExtra || [])]);
+    state.formulations = uniqueReferenceItems([...(state.formulations || []), ...(state.formulationsExtra || [])]);
   } catch (error) {
     if (window.AKL_DATA) {
       Object.assign(state, {
@@ -126,6 +130,16 @@ async function loadData() {
     }
     renderLoadError(error);
   }
+}
+
+function uniqueReferenceItems(items) {
+  const seen = new Set();
+  return items.filter((item) => {
+    const key = slugify(getTitle(item));
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function renderAll() {
