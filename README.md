@@ -19,6 +19,7 @@ This tool is for educational research only. It does not diagnose, treat, cure, o
 - Contraindication rules for pregnancy, lactation, children, elderly users, medicines, chronic disease, and allergies
 - Conservative educational language and source references
 - Mobile responsive layout
+- Optional WhatsApp worker framework that uses the same JSON knowledge base with OpenRouter or a Hermes-compatible endpoint
 
 ## File Structure
 
@@ -28,6 +29,13 @@ ayurveda-knowledge-library/
 ├── style.css
 ├── script.js
 ├── README.md
+├── whatsapp-worker/
+│   ├── package.json
+│   ├── wrangler.toml.example
+│   ├── src/
+│   │   └── worker.js
+│   └── test/
+│       └── answer.test.mjs
 ├── data/
 │   ├── herbs.json
 │   ├── herbs_extra.json
@@ -86,6 +94,15 @@ The app remains fully free and static. Dynamic features use the browser only:
 - The Vaidya-style conversation remains in the browser until the user clears it
 - Voice-to-text uses browser speech recognition when available and does not add any paid service
 - No account, backend, API key, or paid service is used
+
+The optional WhatsApp worker is separate from the static site. It is designed to avoid extra paid chatbot platforms:
+
+- No Twilio, WATI, AiSensy, hosted bot platform, vector database, or paid database is required
+- Cloudflare Workers can run the webhook at MVP scale on the free tier
+- The worker reuses the public JSON knowledge base from this GitHub Pages site
+- OpenRouter or a Hermes-compatible endpoint can be used only if you already have access
+- If no AI provider is configured, the worker falls back to a rule-based grounded answer
+- Meta WhatsApp Business Platform may still charge for WhatsApp messaging depending account, country, category, and usage
 
 ## Coverage Scope
 

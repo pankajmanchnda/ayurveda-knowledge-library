@@ -1,0 +1,21 @@
+name = "ayurveda-whatsapp-worker"
+main = "src/worker.js"
+compatibility_date = "2026-06-03"
+
+[vars]
+AI_PROVIDER = "openrouter"
+OPENROUTER_MODEL = "nousresearch/hermes-3-llama-3.1-405b"
+HERMES_MODEL = "hermes"
+KNOWLEDGE_BASE_URL = "https://pankajmanchnda.github.io/ayurveda-knowledge-library/"
+WHATSAPP_GRAPH_VERSION = "v24.0"
+SITE_URL = "https://pankajmanchnda.github.io/ayurveda-knowledge-library/"
+APP_TITLE = "Ayurveda Knowledge Library"
+
+# Set secrets with wrangler, never commit real values:
+# wrangler secret put WHATSAPP_VERIFY_TOKEN
+# wrangler secret put WHATSAPP_ACCESS_TOKEN
+# wrangler secret put WHATSAPP_PHONE_NUMBER_ID
+# wrangler secret put OPENROUTER_API_KEY
+# Optional direct Hermes/OpenAI-compatible endpoint:
+# wrangler secret put HERMES_BASE_URL
+# wrangler secret put HERMES_API_KEY
