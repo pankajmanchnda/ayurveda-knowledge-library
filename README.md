@@ -99,6 +99,8 @@ The optional WhatsApp worker is separate from the static site. It is designed to
 
 - No Twilio, WATI, AiSensy, hosted bot platform, vector database, or paid database is required
 - Cloudflare Workers can run the webhook at MVP scale on the free tier
+- Current Worker URL: `https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev`
+- Meta webhook callback URL: `https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev/webhook`
 - The worker reuses the public JSON knowledge base from this GitHub Pages site
 - OpenRouter or a Hermes-compatible endpoint can be used only if you already have access
 - If no AI provider is configured, the worker falls back to a rule-based grounded answer

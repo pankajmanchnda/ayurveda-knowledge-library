@@ -41,6 +41,10 @@ export default {
       return json({ ok: true, service: "ayurveda-whatsapp-worker" });
     }
 
+    if (request.method === "GET" && url.pathname === "/setup-status") {
+      return json(setupStatus(env));
+    }
+
     if (request.method === "GET" && url.pathname === "/webhook") {
       return verifyWebhook(url, env);
     }
@@ -70,6 +74,36 @@ function verifyWebhook(url, env) {
     return new Response(challenge || "", { status: 200 });
   }
   return new Response("Forbidden", { status: 403 });
+}
+
+function setupStatus(env) {
+  const requiredSecrets = {
+    openrouterApiKey: Boolean(env.OPENROUTER_API_KEY),
+    whatsappVerifyToken: Boolean(env.WHATSAPP_VERIFY_TOKEN),
+    whatsappAccessToken: Boolean(env.WHATSAPP_ACCESS_TOKEN),
+    whatsappPhoneNumberId: Boolean(env.WHATSAPP_PHONE_NUMBER_ID)
+  };
+  const readyForMetaWebhook = requiredSecrets.whatsappVerifyToken;
+  const readyToReplyOnWhatsApp = requiredSecrets.whatsappAccessToken && requiredSecrets.whatsappPhoneNumberId;
+  const readyForGroundedAi = requiredSecrets.openrouterApiKey || Boolean(env.HERMES_BASE_URL);
+
+  return {
+    ok: true,
+    service: "ayurveda-whatsapp-worker",
+    workerUrl: "https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev",
+    webhookUrl: "https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev/webhook",
+    knowledgeBaseUrl: env.KNOWLEDGE_BASE_URL || DEFAULT_KNOWLEDGE_BASE_URL,
+    aiProvider: env.AI_PROVIDER || "rule-fallback",
+    requiredSecrets,
+    readyForMetaWebhook,
+    readyToReplyOnWhatsApp,
+    readyForGroundedAi,
+    nextMissingStep: !requiredSecrets.whatsappPhoneNumberId
+      ? "Add WHATSAPP_PHONE_NUMBER_ID as a Cloudflare secret."
+      : !readyToReplyOnWhatsApp
+        ? "Add WhatsApp access token and phone number ID secrets."
+        : "Configure Meta webhook callback and subscribe to messages."
+  };
 }
 
 async function handleWhatsAppPayload(payload, env) {

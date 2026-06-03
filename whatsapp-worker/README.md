@@ -10,6 +10,26 @@ It receives WhatsApp questions, retrieves matching entries from the existing JSO
 
 It is purpose-built educational support, not a general-purpose chatbot.
 
+## Live Worker
+
+The production Worker is hosted 24/7 on Cloudflare:
+
+```text
+https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev
+```
+
+Meta WhatsApp webhook callback URL:
+
+```text
+https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev/webhook
+```
+
+Webhook verify token:
+
+```text
+ayurveda-library-verify-2026
+```
+
 ## Files
 
 ```text
@@ -87,13 +107,22 @@ npx wrangler dev
 npx wrangler deploy
 ```
 
-9. In Meta Developer Dashboard, set the WhatsApp webhook callback URL:
+9. Check deployment status:
+
+```bash
+curl https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev/health
+curl https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev/setup-status
+```
+
+10. In Meta Developer Dashboard, set the WhatsApp webhook callback URL:
 
 ```text
-https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev/webhook
+https://ayurveda-whatsapp-worker.ayurveda-library.workers.dev/webhook
 ```
 
 Use the same verify token that you stored in `WHATSAPP_VERIFY_TOKEN`.
+
+11. Subscribe the webhook to the `messages` field.
 
 ## Local Ask Test
 

@@ -1,6 +1,8 @@
 name = "ayurveda-whatsapp-worker"
 main = "src/worker.js"
 compatibility_date = "2026-06-03"
+workers_dev = true
+preview_urls = false
 
 [vars]
 AI_PROVIDER = "openrouter"
