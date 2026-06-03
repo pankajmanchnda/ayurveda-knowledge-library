@@ -58,6 +58,7 @@ export default {
 
     if (request.method === "POST" && url.pathname === "/webhook") {
       const payload = await request.json().catch(() => ({}));
+      console.log(`WhatsApp webhook received: entries=${payload.entry?.length || 0}`);
       ctx.waitUntil(handleWhatsAppPayload(payload, env));
       return json({ ok: true });
     }
@@ -108,10 +109,12 @@ function setupStatus(env) {
 
 async function handleWhatsAppPayload(payload, env) {
   const messages = extractIncomingTextMessages(payload);
+  console.log(`WhatsApp webhook parsed: textMessages=${messages.length}`);
   if (!messages.length) return;
 
   const knowledge = await loadKnowledge(env);
   for (const message of messages) {
+    console.log(`Answering WhatsApp text: id=${message.id || "unknown"} chars=${message.text.length}`);
     const result = await answerQuestion(message.text, env, knowledge);
     await sendWhatsAppText(message.from, result.answer, env);
   }
@@ -163,6 +166,8 @@ async function sendWhatsAppText(to, text, env) {
     if (!response.ok) {
       const errorText = await response.text();
       console.warn(`WhatsApp send failed: ${response.status} ${errorText}`);
+    } else {
+      console.log(`WhatsApp send succeeded: chars=${chunk.length}`);
     }
   }
 }
