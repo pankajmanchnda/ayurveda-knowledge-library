@@ -8,12 +8,16 @@
       name="description"
       content="Educational Ayurvedic herb and formulation reference tool with rule-based symptom assessment."
     />
+    <link rel="icon" type="image/svg+xml" href="assets/knowledge-library-logo.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="top-nav" aria-label="Primary navigation">
-        <a class="brand" href="#home">Ayurveda Knowledge Library</a>
+        <a class="brand" href="#home">
+          <img src="assets/knowledge-library-logo.svg" alt="" width="34" height="34" />
+          <span>Ayurveda Knowledge Library</span>
+        </a>
         <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">
           Menu
         </button>
@@ -431,6 +435,11 @@
 
     <footer class="site-footer">
       <p>Educational research reference. Built as a static GitHub Pages MVP with no backend, API keys, or paid services.</p>
+      <p>
+        <a href="privacy.html">Privacy Policy</a>
+        <span aria-hidden="true"> · </span>
+        <a href="data-deletion.html">Data Deletion</a>
+      </p>
     </footer>
 
     <div class="detail-drawer" id="detailDrawer" hidden>

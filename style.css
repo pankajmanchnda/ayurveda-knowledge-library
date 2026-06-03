@@ -62,9 +62,17 @@ textarea {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--accent-strong);
   font-weight: 760;
   text-decoration: none;
+}
+
+.brand img {
+  display: block;
+  border-radius: 7px;
 }
 
 .nav-links {
@@ -646,6 +654,54 @@ legend {
   color: var(--muted);
   padding: 24px 20px;
   text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer p + p {
+  margin-top: 8px;
+}
+
+.site-footer a {
+  color: var(--accent-strong);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.legal-page {
+  min-height: calc(100vh - 77px);
+}
+
+.legal-content {
+  max-width: 900px;
+}
+
+.legal-content h1 {
+  font-size: clamp(2.3rem, 6vw, 4.2rem);
+}
+
+.legal-content h2 {
+  margin-top: 34px;
+  font-size: 1.35rem;
+}
+
+.legal-content p {
+  color: var(--muted);
+}
+
+.legal-content .warning-box {
+  margin: 28px 0 8px;
+  color: var(--ink);
+}
+
+.legal-nav {
+  gap: 8px;
 }
 
 @media (max-width: 900px) {
